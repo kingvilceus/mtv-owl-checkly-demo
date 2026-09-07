@@ -1,0 +1,16 @@
+# Repo-wide Python tooling config. Runtime deps live in api/requirements.txt.
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["api", "scripts"]
+extend-exclude = ["web"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4", "N"]
+
+[tool.ruff.lint.per-file-ignores]
+# seed / scripts are CLIs; print is intentional
+"scripts/*" = ["T201"]
+
+[tool.ruff.format]
+quote-style = "double"

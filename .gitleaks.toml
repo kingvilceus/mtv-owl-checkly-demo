@@ -1,0 +1,13 @@
+# Secret scanning config. Uses gitleaks' default ruleset plus the tweaks below.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Local, non-secret dev defaults"
+paths = [
+  '''\.env\.example$''',
+]
+regexes = [
+  # Throwaway local Postgres credentials used only in docker-compose / examples.
+  '''postgresql://owl:owl@''',
+]

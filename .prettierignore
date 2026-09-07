@@ -1,0 +1,7 @@
+docs/
+data/
+web/dist/
+web/node_modules/
+**/*.min.*
+pnpm-lock.yaml
+package-lock.json
