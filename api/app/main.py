@@ -42,9 +42,10 @@ def strategies() -> dict[str, list[str]]:
 @app.get("/funds")
 def list_funds(
     strategy: str | None = None,
-    limit: int = Query(default=100, ge=1, le=500),
+    limit: int | None = Query(default=None, ge=1),
     offset: int = Query(default=0, ge=0),
 ) -> dict[str, Any]:
+    """List funds. Omit ``limit`` to return every matching row."""
     filters: list[str] = []
     args: list[Any] = []
     if strategy:
@@ -52,11 +53,14 @@ def list_funds(
         args.append(strategy)
     where = f"WHERE {' AND '.join(filters)}" if filters else ""
 
+    limit_sql = "LIMIT ALL" if limit is None else "LIMIT %s"
+    row_args = [*args, *([] if limit is None else [limit]), offset]
+
     with connect() as conn:
         total = conn.execute(f"SELECT count(*) AS n FROM funds {where}", args).fetchone()["n"]
         rows = conn.execute(
-            f"SELECT {FUND_COLUMNS} FROM funds {where} ORDER BY fund_id LIMIT %s OFFSET %s",
-            [*args, limit, offset],
+            f"SELECT {FUND_COLUMNS} FROM funds {where} ORDER BY fund_id {limit_sql} OFFSET %s",
+            row_args,
         ).fetchall()
 
     return {"funds": rows, "total": total, "limit": limit, "offset": offset}
