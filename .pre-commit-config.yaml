@@ -45,3 +45,12 @@ repos:
     rev: v8.30.0
     hooks:
       - id: gitleaks
+
+  - repo: local
+    hooks:
+      - id: eslint-web
+        name: eslint (web)
+        language: system
+        entry: web/scripts/lint.sh
+        files: ^web/.*\.(ts|tsx)$
+        pass_filenames: false
