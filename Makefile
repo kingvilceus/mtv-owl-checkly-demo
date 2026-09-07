@@ -4,6 +4,7 @@
 PORT ?= 8000
 DATABASE_URL ?= postgresql://owl:owl@db:5432/owl
 COMPOSE ?= docker compose
+COMPOSE_ENV = API_HOST_PORT=$(PORT) DATABASE_URL=$(DATABASE_URL)
 API_RUN = $(COMPOSE) run --rm -e DATABASE_URL=$(DATABASE_URL) api
 
 .PHONY: help hooks lint seed migrate serve web up down psql
@@ -27,18 +28,16 @@ migrate: ## Apply every migration up to the current checkout
 	$(API_RUN) yoyo apply --batch --database "$(DATABASE_URL)"
 
 serve: ## Run the API on PORT (default 8000)
-	$(COMPOSE) up -d --wait db
-	API_HOST_PORT=$(PORT) $(COMPOSE) run --rm --service-ports \
-		-e DATABASE_URL=$(DATABASE_URL) api
+	$(COMPOSE_ENV) $(COMPOSE) up api
 
-web: ## Run the React dev server (http://localhost:5173)
-	$(COMPOSE) up web
+web: ## Run the React dev server (http://localhost:5173; API on :8000)
+	$(COMPOSE_ENV) $(COMPOSE) up web
 
-up: ## Start the whole stack in the background
-	$(COMPOSE) up -d --wait
+up: ## Start the whole stack in the background (API :8000, web :5173)
+	$(COMPOSE_ENV) $(COMPOSE) up -d --wait
 
 down: ## Stop the stack and delete its volumes
-	$(COMPOSE) down -v
+	$(COMPOSE) down -v --remove-orphans
 
 psql: ## Open a psql shell on the app database
 	$(COMPOSE) exec db psql -U owl -d owl
