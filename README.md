@@ -57,12 +57,12 @@ database, so two checkouts can be pointed at one Postgres to compare behavior.
 
 ## API
 
-| Method | Path               | Notes                                      |
-| ------ | ------------------ | ------------------------------------------ |
-| GET    | `/health`          | DB connectivity check                      |
-| GET    | `/funds`           | `?strategy=`, `?limit=` (≤500), `?offset=` |
-| GET    | `/funds/{fund_id}` | 404 if unknown                             |
-| GET    | `/strategies`      | distinct strategy values (for the filter)  |
+| Method | Path               | Notes                                              |
+| ------ | ------------------ | -------------------------------------------------- |
+| GET    | `/health`          | DB connectivity check                              |
+| GET    | `/funds`           | `?strategy=`, `?limit=` (omit for all), `?offset=` |
+| GET    | `/funds/{fund_id}` | 404 if unknown                                     |
+| GET    | `/strategies`      | distinct strategy values (for the filter)          |
 
 `commitment` is returned as the exact stored string (or `null` when blank).
 
