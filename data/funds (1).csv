@@ -1,0 +1,501 @@
+fund_id,fund_name,manager,strategy,vintage_year,commitment,reported_at
+F-1001,Pinehurst Infrastructure Fund I,Pinehurst Advisors,Infrastructure,2010,"USD 10,000,000",2026-05-27
+F-1002,Harborview Venture Capital Fund I,Harborview Equity,Venture Capital,2014,"¥1,125,000,000 JPY",2025-02-13
+F-1003,Vesper Growth Equity Fund VII,Vesper Ventures,Growth Equity,2013,"£12,500,000 GBP",2026-05-16
+F-1004,Longleaf Growth Equity Fund III,Longleaf Holdings,Growth Equity,2017,"$15,000,000 USD",2025-11-03
+F-1005,Thornbury Private Credit Fund X,Thornbury Group,Private Credit,2008,"$250,000 USD",2025-04-16
+F-1006,Vesper Private Credit Fund VII,Vesper Ventures,Private Credit,2010,"¥150,000,000 JPY",2026-04-21
+F-1007,Underwood Fund of Funds Fund X,Underwood Partners,Fund of Funds,2012,"$20,000,000 USD",2026-06-03
+F-1008,Bellamy Secondaries Fund VI,Bellamy Group,Secondaries,2010,"$500,000 USD",2025-12-28
+F-1009,Redstone Buyout Fund XII,Redstone Advisors,Buyout,2009,"$1,500,000 USD",2025-04-24
+F-1010,Wren Hollow Growth Equity Fund VII,Wren Hollow Capital,Growth Equity,2009,"¥37,500,000 JPY",2025-05-16
+F-1011,Wren Hollow Infrastructure Fund VII,Wren Hollow Capital,Infrastructure,2019,"€40,000,000 EUR",2025-06-15
+F-1012,Harborview Venture Capital Fund III,Harborview Equity,Venture Capital,2016,"~$1,000,000 USD",2026-05-26
+F-1013,Stonebridge Growth Equity Fund IV,Stonebridge Equity,Growth Equity,2016,"$2,500,000 USD",2025-04-04
+F-1014,Blackwater Infrastructure Fund V,Blackwater Ventures,Infrastructure,2022,"$500,000 USD",2026-08-05
+F-1015,Granite Peak Growth Equity Fund V,Granite Peak Partners,Growth Equity,2016,"£2,000,000 GBP",2025-01-04
+F-1016,Marlowe Secondaries Fund VIII,Marlowe Ventures,Secondaries,2023,"$2,000,000 USD",2025-10-24
+F-1017,Belmont Real Estate Fund IV,Belmont Capital,Real Estate,2020,"$50,000,000 USD",2025-05-11
+F-1018,Aldergrove Fund of Funds Fund VI,Aldergrove Capital,Fund of Funds,2015,"£750,000 GBP",2025-08-12
+F-1019,Tidewater Private Credit Fund I,Tidewater Partners,Private Credit,2010,"$500,000 USD",2025-04-09
+F-1020,Copperline Buyout Fund VIII,Copperline Group,Buyout,2021,"$750,000 USD",2025-09-02
+F-1021,Fairhaven Growth Equity Fund IV,Fairhaven Ventures,Growth Equity,2017,,2025-05-04
+F-1022,Ridgeline Infrastructure Fund VII,Ridgeline Holdings,Infrastructure,2025,"$7,500,000 USD",2025-11-09
+F-1023,Wren Hollow Venture Capital Fund IX,Wren Hollow Capital,Venture Capital,2016,"$7,500,000 USD",2025-07-01
+F-1024,Halcyon Secondaries Fund VI,Halcyon Group,Secondaries,2013,"$15,000,000 USD",2025-11-17
+F-1025,Blackwater Growth Equity Fund XI,Blackwater Ventures,Growth Equity,2023,"$7,500,000 USD",2025-05-11
+F-1026,Ashford Growth Equity Fund III,Ashford Management,Growth Equity,2010,"$50,000,000 USD",2026-03-13
+F-1027,Longleaf Buyout Fund VI,Longleaf Holdings,Buyout,2020,1250000 USD,2025-12-05
+F-1028,Northfield Infrastructure Fund XII,Northfield Capital,Infrastructure,2014,"$1,250,000 USD",2026-06-20
+F-1029,Redstone Growth Equity Fund V,Redstone Advisors,Growth Equity,2022,500000 USD,2025-08-19
+F-1030,Ironwood Real Estate Fund XII,Ironwood Ventures,Real Estate,2020,"$500,000",2025-04-11
+F-1031,Harborview Real Estate Fund III,Harborview Equity,Real Estate,2011,"$3,000,000 USD",2026-08-27
+F-1032,Stonebridge Growth Equity Fund V,Stonebridge Equity,Growth Equity,2015,"$1,250,000 USD",2025-04-14
+F-1033,Brightwater Growth Equity Fund VII,Brightwater Equity,Growth Equity,2010,1250000 USD,2025-10-09
+F-1034,Vantage Venture Capital Fund IV,Vantage Group,Venture Capital,2022,"$2,000,000 USD",2025-07-22
+F-1035,Sable Creek Buyout Fund XI,Sable Creek Advisors,Buyout,2010,"$20,000,000 USD",2026-05-25
+F-1036,Ridgeline Infrastructure Fund II,Ridgeline Holdings,Infrastructure,2016,"$10,000,000.25 USD",2026-06-04
+F-1037,Dunmore Venture Capital Fund IV,Dunmore Advisors,Venture Capital,2009,"$3,000,000 usd",2026-08-08
+F-1038,Fairhaven Fund of Funds Fund III,Fairhaven Ventures,Fund of Funds,2025,"$5,000,000.75 USD",2025-11-28
+F-1039,Vesper Secondaries Fund I,Vesper Ventures,Secondaries,2021,"$1,250,000 USD",2026-04-26
+F-1040,Dunmore Buyout Fund III,Dunmore Advisors,Buyout,2021,"$10,000,000 USD",2026-04-09
+F-1041,Granite Peak Growth Equity Fund XI,Granite Peak Partners,Growth Equity,2020,"$25,000,000.50 USD",2025-07-15
+F-1042,Marlowe Venture Capital Fund VI,Marlowe Ventures,Venture Capital,2008,"USD 1,500,000",2025-07-15
+F-1043,Sable Creek Growth Equity Fund I,Sable Creek Advisors,Growth Equity,2025,"€40,000,000 EUR",2026-01-09
+F-1044,Carrick Buyout Fund XII,Carrick Management,Buyout,2008,"¥300,000,000 JPY",2025-01-26
+F-1045,Sycamore Infrastructure Fund VII,Sycamore Advisors,Infrastructure,2018,"$25,000,000 USD",2025-01-21
+F-1046,Meridian Venture Capital Fund VIII,Meridian Equity,Venture Capital,2020,"$750,000.75 USD",2025-12-16
+F-1047,Underwood Growth Equity Fund II,Underwood Partners,Growth Equity,2016,"$7,500,000 USD",2025-11-13
+F-1048,Fairhaven Real Estate Fund I,Fairhaven Ventures,Real Estate,2023,"$750,000",2025-05-26
+F-1049,Copperline Private Credit Fund VII,Copperline Group,Private Credit,2019,"$25,000,000 USD",2025-08-24
+F-1050,Harborview Fund of Funds Fund VIII,Harborview Equity,Fund of Funds,2012,"€15,000,000 EUR",2025-08-08
+F-1051,Harborview Buyout Fund XII,Harborview Equity,Buyout,2008,Not reported,2026-04-03
+F-1052,Windrow Secondaries Fund X,Windrow Management,Secondaries,2018,"$20,000,000 USD",2025-02-08
+F-1053,Orchard Hill Private Credit Fund III,Orchard Hill Group,Private Credit,2021,"$5,000,000 USD",2025-02-19
+F-1054,Thornbury Growth Equity Fund XI,Thornbury Group,Growth Equity,2011,"$7,500,000 USD",2026-06-14
+F-1055,Cardinal Buyout Fund II,Cardinal Partners,Buyout,2024,"$40,000,000 USD",2025-03-06
+F-1056,Ridgeline Private Credit Fund IV,Ridgeline Holdings,Private Credit,2012,Not reported,2025-07-01
+F-1057,Brightwater Venture Capital Fund V,Brightwater Equity,Venture Capital,2023,,2025-06-04
+F-1058,Granite Peak Real Estate Fund X,Granite Peak Partners,Real Estate,2008,"$40,000,000",2025-02-28
+F-1059,Silverthorn Secondaries Fund XII,Silverthorn Ventures,Secondaries,2025,"$40,000,000.25 USD",2025-10-21
+F-1060,Granite Peak Venture Capital Fund XII,Granite Peak Partners,Venture Capital,2019,"$3,000,000 USD",2025-12-09
+F-1061,Cardinal Buyout Fund VI,Cardinal Partners,Buyout,2008,"$50,000,000 USD",2026-03-26
+F-1062,Yarrow Growth Equity Fund IX,Yarrow Equity,Growth Equity,2021,"$25,000,000 USD",2026-04-20
+F-1063,Ridgeline Growth Equity Fund VI,Ridgeline Holdings,Growth Equity,2018,"¥75,000,000 JPY",2025-08-24
+F-1064,Tidewater Infrastructure Fund XII,Tidewater Partners,Infrastructure,2025,"USD 1,250,000",2026-05-09
+F-1065,Ridgeline Fund of Funds Fund I,Ridgeline Holdings,Fund of Funds,2010,"€2,500,000 EUR",2025-10-10
+F-1066,Aldergrove Venture Capital Fund X,Aldergrove Capital,Venture Capital,2013,"$40,000,000 USD",2026-04-22
+F-1067,Kestrel Buyout Fund I,Kestrel Equity,Buyout,2013,"$750,000 USD",2026-03-03
+F-1068,Foxglove Infrastructure Fund VI,Foxglove Equity,Infrastructure,2008,"$20,000,000 USD",2025-07-14
+F-1069,Ironwood Infrastructure Fund X,Ironwood Ventures,Infrastructure,2017,"$3,000,000 USD",2025-05-01
+F-1070,Belmont Secondaries Fund XI,Belmont Capital,Secondaries,2021,"USD 25,000,000",2025-02-12
+F-1071,Orchard Hill Venture Capital Fund V,Orchard Hill Group,Venture Capital,2013,"$1,500,000 USD",2026-01-22
+F-1072,Meridian Secondaries Fund XI,Meridian Equity,Secondaries,2024,"$2,500,000.25 USD",2025-08-14
+F-1073,Brightwater Real Estate Fund VII,Brightwater Equity,Real Estate,2019,"$12,500,000 USD",2026-08-06
+F-1074,Vesper Infrastructure Fund I,Vesper Ventures,Infrastructure,2008,"€50,000,000 EUR",2025-03-19
+F-1075,Fairhaven Buyout Fund VII,Fairhaven Ventures,Buyout,2016,Not reported,2025-09-07
+F-1076,Aldergrove Growth Equity Fund I,Aldergrove Capital,Growth Equity,2011,"€2,000,000 EUR",2026-07-15
+F-1077,Yarrow Secondaries Fund IV,Yarrow Equity,Secondaries,2024,"$50,000,000 USD",2025-06-14
+F-1078,Halcyon Secondaries Fund VI,Halcyon Group,Secondaries,2022,,2026-08-26
+F-1079,Vesper Fund of Funds Fund III,Vesper Ventures,Fund of Funds,2022,"$1,500,000.50 USD",2025-03-02
+F-1080,Vantage Buyout Fund X,Vantage Group,Buyout,2018,"$10,000,000 USD",2026-06-07
+F-1081,Windrow Infrastructure Fund II,Windrow Management,Infrastructure,2016,"$5,000,000.25 USD",2025-06-17
+F-1082,Fenwick Secondaries Fund V,Fenwick Holdings,Secondaries,2020,"$25,000,000 usd",2025-07-20
+F-1083,Brightwater Secondaries Fund VIII,Brightwater Equity,Secondaries,2013,"$1,500,000 USD",2026-06-01
+F-1084,Belmont Fund of Funds Fund V,Belmont Capital,Fund of Funds,2017,"$750,000 USD",2025-12-17
+F-1085,Sycamore Secondaries Fund IX,Sycamore Advisors,Secondaries,2023,"$2,000,000.75 USD",2025-04-18
+F-1086,Underwood Fund of Funds Fund XI,Underwood Partners,Fund of Funds,2021,"$2,500,000 USD",2026-02-15
+F-1087,Vesper Fund of Funds Fund VI,Vesper Ventures,Fund of Funds,2022,,2025-05-19
+F-1088,Foxglove Growth Equity Fund XII,Foxglove Equity,Growth Equity,2021,"$3,000,000 USD",2025-07-13
+F-1089,Kestrel Secondaries Fund II,Kestrel Equity,Secondaries,2012,"$2,500,000 USD",2025-11-06
+F-1090,Vesper Secondaries Fund VIII,Vesper Ventures,Secondaries,2019,"$7,500,000 USD",2025-07-20
+F-1091,Wren Hollow Buyout Fund II,Wren Hollow Capital,Buyout,2011,"$15,000,000 USD",2026-08-11
+F-1092,Longleaf Private Credit Fund II,Longleaf Holdings,Private Credit,2009,"$2,000,000 USD",2025-10-04
+F-1093,Belmont Private Credit Fund VI,Belmont Capital,Private Credit,2017,"$40,000,000 USD",2025-12-25
+F-1094,Halcyon Infrastructure Fund X,Halcyon Group,Infrastructure,2010,"$2,000,000 USD",2025-05-13
+F-1095,Quarry Lane Venture Capital Fund IV,Quarry Lane Holdings,Venture Capital,2018,"¥750,000,000 JPY",2025-07-21
+F-1096,Ironwood Growth Equity Fund IX,Ironwood Ventures,Growth Equity,2011,"$2,000,000.25 USD",2025-08-15
+F-1097,Fairhaven Real Estate Fund XI,Fairhaven Ventures,Real Estate,2018,"$10,000,000 USD",2026-04-19
+F-1098,Brightwater Buyout Fund VIII,Brightwater Equity,Buyout,2010,"$7,500,000 USD",2025-10-26
+F-1099,Silverthorn Real Estate Fund IV,Silverthorn Ventures,Real Estate,2012,"$20,000,000 USD",2026-01-09
+F-1100,Yarrow Infrastructure Fund V,Yarrow Equity,Infrastructure,2024,"£3,000,000 GBP",2025-05-28
+F-1101,Windrow Growth Equity Fund IV,Windrow Management,Growth Equity,2022,"USD 50,000,000",2025-08-12
+F-1102,Ridgeline Growth Equity Fund V,Ridgeline Holdings,Growth Equity,2015,"$50,000,000 USD",2025-04-17
+F-1103,Carrick Infrastructure Fund VIII,Carrick Management,Infrastructure,2009,"$250,000 USD",2025-10-22
+F-1104,Marlowe Private Credit Fund V,Marlowe Ventures,Private Credit,2022,"$7,500,000.01 USD",2026-04-06
+F-1105,Blackwater Fund of Funds Fund XI,Blackwater Ventures,Fund of Funds,2009,"$7,500,000 USD",2026-01-18
+F-1106,Fairhaven Fund of Funds Fund X,Fairhaven Ventures,Fund of Funds,2014,"$15,000,000 USD",2025-08-06
+F-1107,Kestrel Real Estate Fund IV,Kestrel Equity,Real Estate,2023,"$1,250,000 USD",2026-05-07
+F-1108,Ellsworth Secondaries Fund XII,Ellsworth Group,Secondaries,2009,"$3,000,000 USD",2025-11-26
+F-1109,Fenwick Venture Capital Fund X,Fenwick Holdings,Venture Capital,2016,15000000 USD,2026-04-27
+F-1110,Yarrow Secondaries Fund VII,Yarrow Equity,Secondaries,2022,"$1,500,000 USD",2025-07-24
+F-1111,Copperline Venture Capital Fund XII,Copperline Group,Venture Capital,2008,"$2,000,000 USD",2025-09-02
+F-1112,Northfield Real Estate Fund VIII,Northfield Capital,Real Estate,2025,"$1,250,000 USD",2025-03-21
+F-1113,Quarry Lane Real Estate Fund VIII,Quarry Lane Holdings,Real Estate,2022,"€25,000,000 EUR",2025-12-28
+F-1114,Cardinal Venture Capital Fund XII,Cardinal Partners,Venture Capital,2017,"$750,000 USD",2026-04-05
+F-1115,Halcyon Venture Capital Fund VIII,Halcyon Group,Venture Capital,2011,"$1,000,000 USD",2025-10-12
+F-1116,Marlowe Buyout Fund IV,Marlowe Ventures,Buyout,2025,"$20,000,000 USD",2025-03-26
+F-1117,Belmont Secondaries Fund II,Belmont Capital,Secondaries,2014,"$50,000,000 USD",2026-01-23
+F-1118,Granite Peak Venture Capital Fund XII,Granite Peak Partners,Venture Capital,2019,"¥75,000,000 JPY",2025-12-27
+F-1119,Redstone Fund of Funds Fund IX,Redstone Advisors,Fund of Funds,2020,"€50,000,000 EUR",2025-12-12
+F-1120,Sable Creek Infrastructure Fund XI,Sable Creek Advisors,Infrastructure,2017,"£1,000,000 GBP",2025-12-01
+F-1121,Thornbury Infrastructure Fund IX,Thornbury Group,Infrastructure,2009,"$40,000,000 USD",2026-05-18
+F-1122,Ellsworth Secondaries Fund XII,Ellsworth Group,Secondaries,2017,"$25,000,000 USD",2025-05-16
+F-1123,Silverthorn Venture Capital Fund IV,Silverthorn Ventures,Venture Capital,2023,"£5,000,000 GBP",2026-06-06
+F-1124,Foxglove Real Estate Fund XI,Foxglove Equity,Real Estate,2017,"USD 40,000,000",2025-07-14
+F-1125,Ridgeline Fund of Funds Fund XI,Ridgeline Holdings,Fund of Funds,2024,"£500,000 GBP",2025-07-10
+F-1126,Underwood Venture Capital Fund X,Underwood Partners,Venture Capital,2019,"$1,250,000.01 USD",2025-06-18
+F-1127,Marlowe Fund of Funds Fund VI,Marlowe Ventures,Fund of Funds,2022,"$5,000,000 USD",2025-04-17
+F-1128,Brightwater Venture Capital Fund VII,Brightwater Equity,Venture Capital,2018,"$25,000,000 USD",2026-06-19
+F-1129,Fenwick Fund of Funds Fund II,Fenwick Holdings,Fund of Funds,2024,"$40,000,000 USD",2026-03-21
+F-1130,Wren Hollow Private Credit Fund IV,Wren Hollow Capital,Private Credit,2021,"$2,500,000 USD",2026-05-02
+F-1131,Sable Creek Fund of Funds Fund VII,Sable Creek Advisors,Fund of Funds,2021,"$3,000,000 USD",2025-02-16
+F-1132,Ridgeline Infrastructure Fund VII,Ridgeline Holdings,Infrastructure,2023,"$1,500,000 USD",2026-01-18
+F-1133,Blackwater Secondaries Fund IX,Blackwater Ventures,Secondaries,2021,"$1,500,000 USD",2025-03-07
+F-1134,Ashford Infrastructure Fund XII,Ashford Management,Infrastructure,2024,,2025-03-21
+F-1135,Ridgeline Secondaries Fund VIII,Ridgeline Holdings,Secondaries,2025,Undisclosed,2026-08-09
+F-1136,Sable Creek Venture Capital Fund XII,Sable Creek Advisors,Venture Capital,2025,"$12,500,000 USD",2026-02-28
+F-1137,Sycamore Venture Capital Fund VIII,Sycamore Advisors,Venture Capital,2022,"$250,000.01 USD",2025-10-16
+F-1138,Vesper Fund of Funds Fund VII,Vesper Ventures,Fund of Funds,2023,"$1,000,000 USD",2026-08-15
+F-1139,Aldergrove Infrastructure Fund XII,Aldergrove Capital,Infrastructure,2024,"$5,000,000 USD",2025-02-17
+F-1140,Yarrow Fund of Funds Fund VII,Yarrow Equity,Fund of Funds,2011,"$50,000,000 USD",2026-02-18
+F-1141,Halcyon Real Estate Fund IV,Halcyon Group,Real Estate,2016,"$2,500,000 USD",2025-11-17
+F-1142,Ashford Private Credit Fund IV,Ashford Management,Private Credit,2020,"$2,000,000 USD",2025-08-26
+F-1143,Ironwood Infrastructure Fund IV,Ironwood Ventures,Infrastructure,2025,"$50,000,000 USD",2026-01-12
+F-1144,Stonebridge Secondaries Fund VII,Stonebridge Equity,Secondaries,2024,"$12,500,000.50 USD",2025-05-17
+F-1145,Windrow Fund of Funds Fund V,Windrow Management,Fund of Funds,2024,"$1,000,000.01 USD",2025-12-21
+F-1146,Kestrel Growth Equity Fund IX,Kestrel Equity,Growth Equity,2016,"$3,000,000 USD",2026-07-18
+F-1147,Brightwater Real Estate Fund XI,Brightwater Equity,Real Estate,2024,"$250,000 USD",2026-07-06
+F-1148,Pinehurst Infrastructure Fund VI,Pinehurst Advisors,Infrastructure,2017,"USD 1,000,000",2026-03-15
+F-1149,Foxglove Fund of Funds Fund V,Foxglove Equity,Fund of Funds,2016,"$25,000,000 USD",2025-04-08
+F-1150,Ellsworth Real Estate Fund III,Ellsworth Group,Real Estate,2015,"$5,000,000.25 USD",2026-05-08
+F-1151,Ashford Growth Equity Fund IV,Ashford Management,Growth Equity,2017,"$40,000,000 USD",2025-01-25
+F-1152,Vantage Growth Equity Fund IX,Vantage Group,Growth Equity,2013,"$7,500,000 USD",2026-06-08
+F-1153,Longleaf Infrastructure Fund III,Longleaf Holdings,Infrastructure,2015,"$40,000,000 USD",2025-07-08
+F-1154,Cardinal Buyout Fund III,Cardinal Partners,Buyout,2021,"$5,000,000 USD",2025-04-15
+F-1155,Blackwater Growth Equity Fund VII,Blackwater Ventures,Growth Equity,2021,Not reported,2025-04-01
+F-1156,Cardinal Real Estate Fund V,Cardinal Partners,Real Estate,2019,"$750,000 USD",2026-08-19
+F-1157,Bellamy Private Credit Fund VII,Bellamy Group,Private Credit,2018,"$15,000,000 USD",2025-09-22
+F-1158,Longleaf Private Credit Fund VIII,Longleaf Holdings,Private Credit,2009,"$10,000,000 USD",2026-06-26
+F-1159,Carrick Venture Capital Fund I,Carrick Management,Venture Capital,2016,"¥1,875,000,000 JPY",2026-01-04
+F-1160,Ridgeline Secondaries Fund I,Ridgeline Holdings,Secondaries,2012,"$2,500,000 USD",2025-05-05
+F-1161,Longleaf Buyout Fund V,Longleaf Holdings,Buyout,2013,"$5,000,000 USD",2026-04-28
+F-1162,Granite Peak Real Estate Fund XII,Granite Peak Partners,Real Estate,2012,"$50,000,000 USD",2025-11-06
+F-1163,Sable Creek Fund of Funds Fund VI,Sable Creek Advisors,Fund of Funds,2023,"$1,250,000 USD",2025-05-12
+F-1164,Halcyon Venture Capital Fund X,Halcyon Group,Venture Capital,2022,"¥75,000,000 JPY",2025-01-20
+F-1165,Tidewater Fund of Funds Fund IX,Tidewater Partners,Fund of Funds,2015,,2025-06-10
+F-1166,Tidewater Infrastructure Fund V,Tidewater Partners,Infrastructure,2009,"$10,000,000 USD",2025-10-05
+F-1167,Bellamy Buyout Fund III,Bellamy Group,Buyout,2020,"USD 250,000",2026-04-01
+F-1168,Longleaf Venture Capital Fund IV,Longleaf Holdings,Venture Capital,2024,"  $1,250,000 USD  ",2025-04-15
+F-1169,Meridian Growth Equity Fund VII,Meridian Equity,Growth Equity,2019,"$1,250,000 USD",2026-04-13
+F-1170,Granite Peak Growth Equity Fund XI,Granite Peak Partners,Growth Equity,2025,"$15,000,000 USD",2026-04-25
+F-1171,Orchard Hill Growth Equity Fund XI,Orchard Hill Group,Growth Equity,2013,"$2,500,000 USD",2025-05-02
+F-1172,Blackwater Venture Capital Fund I,Blackwater Ventures,Venture Capital,2025,"$12,500,000 USD",2025-04-13
+F-1173,Halcyon Venture Capital Fund VI,Halcyon Group,Venture Capital,2010,"$1,000,000 USD",2026-01-22
+F-1174,Yarrow Growth Equity Fund I,Yarrow Equity,Growth Equity,2025,1000000 USD,2025-06-26
+F-1175,Sable Creek Venture Capital Fund XII,Sable Creek Advisors,Venture Capital,2009,"¥1,875,000,000 JPY",2025-04-26
+F-1176,Vantage Buyout Fund III,Vantage Group,Buyout,2018,"$20,000,000 USD",2026-06-11
+F-1177,Halcyon Secondaries Fund XII,Halcyon Group,Secondaries,2013,"¥112,500,000 JPY",2025-09-23
+F-1178,Fenwick Venture Capital Fund V,Fenwick Holdings,Venture Capital,2022,"$1,250,000 USD",2026-04-22
+F-1179,Vesper Venture Capital Fund VIII,Vesper Ventures,Venture Capital,2013,"$750,000 USD",2025-08-13
+F-1180,Copperline Venture Capital Fund VI,Copperline Group,Venture Capital,2023,"£10,000,000 GBP",2025-04-18
+F-1181,Dunmore Private Credit Fund X,Dunmore Advisors,Private Credit,2022,"£7,500,000 GBP",2025-05-28
+F-1182,Meridian Buyout Fund VIII,Meridian Equity,Buyout,2020,"€500,000 EUR",2025-08-03
+F-1183,Yarrow Venture Capital Fund I,Yarrow Equity,Venture Capital,2019,"£5,000,000 GBP",2026-02-14
+F-1184,Fenwick Infrastructure Fund VI,Fenwick Holdings,Infrastructure,2009,"$5,000,000 USD",2026-06-26
+F-1185,Cardinal Venture Capital Fund VIII,Cardinal Partners,Venture Capital,2009,"$3,000,000 USD",2025-05-25
+F-1186,Granite Peak Growth Equity Fund III,Granite Peak Partners,Growth Equity,2015,"$5,000,000 USD",2025-10-27
+F-1187,Tidewater Growth Equity Fund IV,Tidewater Partners,Growth Equity,2017,"$1,000,000 USD",2025-10-23
+F-1188,Quarry Lane Venture Capital Fund I,Quarry Lane Holdings,Venture Capital,2009,"$750,000.75 USD",2025-01-18
+F-1189,Granite Peak Infrastructure Fund II,Granite Peak Partners,Infrastructure,2010,"$50,000,000 USD",2026-03-05
+F-1190,Tidewater Venture Capital Fund IV,Tidewater Partners,Venture Capital,2021,"£5,000,000 GBP",2026-08-16
+F-1191,Ashford Private Credit Fund X,Ashford Management,Private Credit,2024,"$250,000 USD",2026-06-27
+F-1192,Ashford Venture Capital Fund XII,Ashford Management,Venture Capital,2018,"$10,000,000 USD",2025-12-26
+F-1193,Aldergrove Growth Equity Fund IX,Aldergrove Capital,Growth Equity,2009,"$2,000,000 USD",2026-07-10
+F-1194,Fairhaven Venture Capital Fund VIII,Fairhaven Ventures,Venture Capital,2025,"$1,250,000 USD",2025-05-27
+F-1195,Aldergrove Infrastructure Fund III,Aldergrove Capital,Infrastructure,2017,"$50,000,000 usd",2026-06-24
+F-1196,Redstone Real Estate Fund VI,Redstone Advisors,Real Estate,2024,"~$5,000,000 USD",2026-04-05
+F-1197,Tidewater Growth Equity Fund VIII,Tidewater Partners,Growth Equity,2010,500000 USD,2026-04-26
+F-1198,Sycamore Real Estate Fund VIII,Sycamore Advisors,Real Estate,2024,"$12,500,000 USD",2026-03-12
+F-1199,Halcyon Secondaries Fund IV,Halcyon Group,Secondaries,2023,"$25,000,000 USD",2026-05-22
+F-1200,Redstone Secondaries Fund I,Redstone Advisors,Secondaries,2013,"$5,000,000 USD",2026-05-04
+F-1201,Fairhaven Infrastructure Fund VIII,Fairhaven Ventures,Infrastructure,2009,"$1,000,000 USD",2025-07-15
+F-1202,Orchard Hill Venture Capital Fund I,Orchard Hill Group,Venture Capital,2012,"$2,500,000 USD",2025-07-27
+F-1203,Yarrow Growth Equity Fund II,Yarrow Equity,Growth Equity,2022,"$7,500,000 USD",2025-01-12
+F-1204,Yarrow Infrastructure Fund II,Yarrow Equity,Infrastructure,2020,"USD 1,250,000",2025-04-11
+F-1205,Vesper Fund of Funds Fund XII,Vesper Ventures,Fund of Funds,2022,"$5,000,000 USD",2025-06-22
+F-1206,Vesper Buyout Fund VII,Vesper Ventures,Buyout,2014,"$250,000 USD",2026-08-18
+F-1207,Kestrel Fund of Funds Fund VI,Kestrel Equity,Fund of Funds,2014,"$2,000,000 USD",2025-08-19
+F-1208,Marlowe Growth Equity Fund III,Marlowe Ventures,Growth Equity,2024,"$5,000,000 USD",2025-06-07
+F-1209,Brightwater Secondaries Fund III,Brightwater Equity,Secondaries,2012,"¥1,125,000,000 JPY",2025-05-20
+F-1210,Sycamore Buyout Fund IV,Sycamore Advisors,Buyout,2021,"USD 500,000",2025-06-28
+F-1211,Brightwater Secondaries Fund VI,Brightwater Equity,Secondaries,2023,"$1,000,000 USD",2026-03-16
+F-1212,Bellamy Secondaries Fund VI,Bellamy Group,Secondaries,2018,"$12,500,000 USD",2026-03-10
+F-1213,Ironwood Growth Equity Fund IX,Ironwood Ventures,Growth Equity,2015,"$500,000 USD",2025-10-17
+F-1214,Tidewater Fund of Funds Fund II,Tidewater Partners,Fund of Funds,2024,"€5,000,000 EUR",2026-05-02
+F-1215,Belmont Private Credit Fund V,Belmont Capital,Private Credit,2020,"$7,500,000 USD",2025-12-20
+F-1216,Underwood Fund of Funds Fund X,Underwood Partners,Fund of Funds,2010,"$1,500,000 USD",2025-04-05
+F-1217,Ashford Infrastructure Fund VIII,Ashford Management,Infrastructure,2017,"$2,500,000 USD",2025-12-27
+F-1218,Ellsworth Private Credit Fund VII,Ellsworth Group,Private Credit,2022,,2026-05-05
+F-1219,Kestrel Infrastructure Fund IV,Kestrel Equity,Infrastructure,2010,"$2,500,000 USD",2025-07-14
+F-1220,Blackwater Infrastructure Fund II,Blackwater Ventures,Infrastructure,2020,"$2,000,000 USD",2025-09-25
+F-1221,Foxglove Real Estate Fund VIII,Foxglove Equity,Real Estate,2023,"$2,000,000 USD",2025-03-16
+F-1222,Tidewater Venture Capital Fund X,Tidewater Partners,Venture Capital,2019,"~$15,000,000 USD",2025-04-28
+F-1223,Underwood Growth Equity Fund XI,Underwood Partners,Growth Equity,2013,"$12,500,000 USD",2026-03-05
+F-1224,Silverthorn Growth Equity Fund XII,Silverthorn Ventures,Growth Equity,2015,"$7,500,000 USD",2025-05-21
+F-1225,Vesper Secondaries Fund XII,Vesper Ventures,Secondaries,2010,"$12,500,000 USD",2025-03-14
+F-1226,Halcyon Buyout Fund XII,Halcyon Group,Buyout,2009,"¥112,500,000 JPY",2025-03-09
+F-1227,Windrow Buyout Fund V,Windrow Management,Buyout,2025,"$500,000 USD",2026-06-16
+F-1228,Copperline Fund of Funds Fund VI,Copperline Group,Fund of Funds,2014,"€25,000,000 EUR",2026-08-13
+F-1229,Underwood Buyout Fund I,Underwood Partners,Buyout,2023,5000000 USD,2026-05-08
+F-1230,Orchard Hill Secondaries Fund I,Orchard Hill Group,Secondaries,2023,"$750,000 USD",2026-04-24
+F-1231,Foxglove Infrastructure Fund VIII,Foxglove Equity,Infrastructure,2017,"$40,000,000 USD",2026-07-24
+F-1232,Blackwater Fund of Funds Fund X,Blackwater Ventures,Fund of Funds,2024,"$2,000,000 USD",2025-08-04
+F-1233,Brightwater Secondaries Fund III,Brightwater Equity,Secondaries,2023,"$1,250,000 USD",2025-06-07
+F-1234,Sable Creek Venture Capital Fund III,Sable Creek Advisors,Venture Capital,2008,"$5,000,000 USD",2025-02-02
+F-1235,Wren Hollow Venture Capital Fund IV,Wren Hollow Capital,Venture Capital,2019,"$3,000,000",2026-07-22
+F-1236,Longleaf Growth Equity Fund VII,Longleaf Holdings,Growth Equity,2011,,2026-04-22
+F-1237,Ellsworth Private Credit Fund V,Ellsworth Group,Private Credit,2009,"$250,000 USD",2026-03-22
+F-1238,Silverthorn Venture Capital Fund III,Silverthorn Ventures,Venture Capital,2008,"$5,000,000 USD",2025-07-01
+F-1239,Cardinal Infrastructure Fund X,Cardinal Partners,Infrastructure,2022,"$1,000,000 usd",2025-10-05
+F-1240,Longleaf Buyout Fund VI,Longleaf Holdings,Buyout,2011,"$750,000 USD",2025-12-01
+F-1241,Wren Hollow Growth Equity Fund III,Wren Hollow Capital,Growth Equity,2015,"$1,000,000 USD",2025-03-21
+F-1242,Copperline Venture Capital Fund IV,Copperline Group,Venture Capital,2014,"~$40,000,000 USD",2025-12-06
+F-1243,Thornbury Real Estate Fund II,Thornbury Group,Real Estate,2021,"$15,000,000 USD",2025-09-09
+F-1244,Silverthorn Buyout Fund I,Silverthorn Ventures,Buyout,2016,"$500,000 USD",2026-05-07
+F-1245,Northfield Growth Equity Fund IX,Northfield Capital,Growth Equity,2011,"$40,000,000 USD",2026-04-04
+F-1246,Aldergrove Infrastructure Fund XI,Aldergrove Capital,Infrastructure,2013,,2025-06-07
+F-1247,Meridian Infrastructure Fund VI,Meridian Equity,Infrastructure,2017,"$15,000,000 USD",2025-08-09
+F-1248,Ellsworth Venture Capital Fund IX,Ellsworth Group,Venture Capital,2009,"$50,000,000.25 USD",2025-10-27
+F-1249,Ridgeline Venture Capital Fund V,Ridgeline Holdings,Venture Capital,2013,"USD 12,500,000",2025-05-19
+F-1250,Harborview Buyout Fund III,Harborview Equity,Buyout,2009,"$2,500,000.01 USD",2025-11-28
+F-1251,Granite Peak Fund of Funds Fund XI,Granite Peak Partners,Fund of Funds,2008,"$750,000 USD",2026-02-01
+F-1252,Meridian Secondaries Fund I,Meridian Equity,Secondaries,2008,"$20,000,000 USD",2025-07-24
+F-1253,Marlowe Venture Capital Fund XII,Marlowe Ventures,Venture Capital,2017,"$5,000,000 USD",2026-02-02
+F-1254,Vesper Secondaries Fund VII,Vesper Ventures,Secondaries,2015,"$250,000.25 USD",2026-05-21
+F-1255,Harborview Secondaries Fund II,Harborview Equity,Secondaries,2017,"$1,000,000 USD",2025-04-15
+F-1256,Sycamore Private Credit Fund XI,Sycamore Advisors,Private Credit,2009,"$50,000,000 USD",2025-04-14
+F-1257,Carrick Growth Equity Fund I,Carrick Management,Growth Equity,2015,"$750,000 USD",2025-11-13
+F-1258,Tidewater Real Estate Fund IX,Tidewater Partners,Real Estate,2017,"€2,000,000 EUR",2026-01-27
+F-1259,Blackwater Growth Equity Fund XII,Blackwater Ventures,Growth Equity,2017,"$500,000 USD",2025-04-01
+F-1260,Ridgeline Infrastructure Fund IV,Ridgeline Holdings,Infrastructure,2025,"$2,500,000 USD",2025-10-08
+F-1261,Vantage Buyout Fund XII,Vantage Group,Buyout,2024,"$2,000,000 USD",2026-08-08
+F-1262,Ironwood Growth Equity Fund XII,Ironwood Ventures,Growth Equity,2014,"¥75,000,000 JPY",2025-01-02
+F-1263,Fenwick Private Credit Fund V,Fenwick Holdings,Private Credit,2015,"$20,000,000 USD",2026-05-09
+F-1264,Marlowe Buyout Fund IX,Marlowe Ventures,Buyout,2020,"$750,000.50 USD",2025-07-09
+F-1265,Granite Peak Private Credit Fund VI,Granite Peak Partners,Private Credit,2017,"$250,000 USD",2025-07-19
+F-1266,Thornbury Secondaries Fund V,Thornbury Group,Secondaries,2024,"$750,000.75 USD",2025-10-03
+F-1267,Foxglove Fund of Funds Fund VIII,Foxglove Equity,Fund of Funds,2021,"$15,000,000 USD",2025-02-25
+F-1268,Quarry Lane Buyout Fund IV,Quarry Lane Holdings,Buyout,2018,"$5,000,000 USD",2025-04-28
+F-1269,Ellsworth Private Credit Fund VII,Ellsworth Group,Private Credit,2017,"$2,500,000 USD",2026-05-21
+F-1270,Ellsworth Buyout Fund II,Ellsworth Group,Buyout,2019,"$40,000,000 USD",2025-06-02
+F-1271,Sycamore Fund of Funds Fund XI,Sycamore Advisors,Fund of Funds,2025,"$20,000,000 USD",2025-08-12
+F-1272,Foxglove Venture Capital Fund IX,Foxglove Equity,Venture Capital,2024,Undisclosed,2025-02-23
+F-1273,Fairhaven Venture Capital Fund VI,Fairhaven Ventures,Venture Capital,2022,"¥300,000,000 JPY",2026-06-03
+F-1274,Halcyon Fund of Funds Fund I,Halcyon Group,Fund of Funds,2024,"£1,000,000 GBP",2026-04-10
+F-1275,Granite Peak Fund of Funds Fund XI,Granite Peak Partners,Fund of Funds,2009,"$7,500,000 USD",2026-05-28
+F-1276,Redstone Fund of Funds Fund VIII,Redstone Advisors,Fund of Funds,2014,"USD 1,500,000",2025-09-04
+F-1277,Ellsworth Growth Equity Fund XI,Ellsworth Group,Growth Equity,2008,"$1,500,000 USD",2025-08-01
+F-1278,Bellamy Venture Capital Fund VII,Bellamy Group,Venture Capital,2018,"$750,000 USD",2025-01-05
+F-1279,Brightwater Venture Capital Fund VII,Brightwater Equity,Venture Capital,2023,"$20,000,000 USD",2026-07-28
+F-1280,Bellamy Fund of Funds Fund VIII,Bellamy Group,Fund of Funds,2008,"$5,000,000",2026-08-18
+F-1281,Foxglove Growth Equity Fund IV,Foxglove Equity,Growth Equity,2020,"£7,500,000 GBP",2026-07-18
+F-1282,Halcyon Venture Capital Fund X,Halcyon Group,Venture Capital,2013,"$250,000.25 USD",2026-04-12
+F-1283,Marlowe Secondaries Fund VII,Marlowe Ventures,Secondaries,2015,"$1,500,000 USD",2025-03-16
+F-1284,Cardinal Private Credit Fund III,Cardinal Partners,Private Credit,2018,"USD 25,000,000",2025-08-27
+F-1285,Thornbury Buyout Fund V,Thornbury Group,Buyout,2021,"$1,250,000 USD",2026-01-27
+F-1286,Brightwater Fund of Funds Fund III,Brightwater Equity,Fund of Funds,2021,"$750,000",2025-02-01
+F-1287,Belmont Private Credit Fund V,Belmont Capital,Private Credit,2020,"$1,500,000",2025-10-17
+F-1288,Carrick Buyout Fund XI,Carrick Management,Buyout,2016,"$12,500,000 USD",2025-12-04
+F-1289,Bellamy Private Credit Fund I,Bellamy Group,Private Credit,2011,"$2,000,000 USD",2026-03-21
+F-1290,Vesper Private Credit Fund II,Vesper Ventures,Private Credit,2016,"$25,000,000 USD",2025-03-11
+F-1291,Marlowe Infrastructure Fund II,Marlowe Ventures,Infrastructure,2022,"$25,000,000 USD",2025-12-13
+F-1292,Foxglove Growth Equity Fund X,Foxglove Equity,Growth Equity,2025,"$10,000,000 USD",2025-03-08
+F-1293,Ashford Venture Capital Fund I,Ashford Management,Venture Capital,2017,"$750,000 USD",2025-01-22
+F-1294,Quarry Lane Buyout Fund V,Quarry Lane Holdings,Buyout,2010,"$3,000,000 usd",2025-02-02
+F-1295,Stonebridge Fund of Funds Fund XII,Stonebridge Equity,Fund of Funds,2025,"$15,000,000",2025-04-15
+F-1296,Foxglove Growth Equity Fund XII,Foxglove Equity,Growth Equity,2025,"$500,000 USD",2025-02-28
+F-1297,Belmont Fund of Funds Fund VII,Belmont Capital,Fund of Funds,2019,"$250,000",2026-04-13
+F-1298,Wren Hollow Buyout Fund I,Wren Hollow Capital,Buyout,2014,"$250,000 USD",2026-07-13
+F-1299,Windrow Infrastructure Fund XI,Windrow Management,Infrastructure,2017,"$25,000,000",2025-08-03
+F-1300,Yarrow Real Estate Fund I,Yarrow Equity,Real Estate,2009,"$250,000 USD",2025-09-17
+F-1301,Sycamore Infrastructure Fund VII,Sycamore Advisors,Infrastructure,2017,"$15,000,000 USD",2025-05-06
+F-1302,Tidewater Infrastructure Fund XII,Tidewater Partners,Infrastructure,2025,,2026-07-05
+F-1303,Cardinal Infrastructure Fund V,Cardinal Partners,Infrastructure,2024,"$2,000,000 USD",2025-06-18
+F-1304,Ironwood Venture Capital Fund V,Ironwood Ventures,Venture Capital,2008,"$2,500,000 USD",2025-10-22
+F-1305,Fenwick Venture Capital Fund IX,Fenwick Holdings,Venture Capital,2010,"£1,250,000 GBP",2025-02-21
+F-1306,Meridian Venture Capital Fund XI,Meridian Equity,Venture Capital,2011,"$3,000,000 USD",2025-03-26
+F-1307,Yarrow Real Estate Fund VI,Yarrow Equity,Real Estate,2015,"$1,500,000 USD",2025-07-26
+F-1308,Meridian Fund of Funds Fund IX,Meridian Equity,Fund of Funds,2025,"$10,000,000.50 USD",2025-03-08
+F-1309,Ironwood Fund of Funds Fund XI,Ironwood Ventures,Fund of Funds,2013,"$15,000,000 USD",2025-04-12
+F-1310,Fenwick Secondaries Fund VII,Fenwick Holdings,Secondaries,2019,"$1,250,000 USD",2025-02-20
+F-1311,Granite Peak Venture Capital Fund VIII,Granite Peak Partners,Venture Capital,2025,"$12,500,000 USD",2025-03-18
+F-1312,Silverthorn Fund of Funds Fund II,Silverthorn Ventures,Fund of Funds,2008,"$7,500,000 USD",2026-08-10
+F-1313,Redstone Buyout Fund VIII,Redstone Advisors,Buyout,2012,"€15,000,000 EUR",2026-07-25
+F-1314,Blackwater Fund of Funds Fund VII,Blackwater Ventures,Fund of Funds,2015,"$25,000,000 USD",2026-02-15
+F-1315,Bellamy Venture Capital Fund VIII,Bellamy Group,Venture Capital,2020,"$50,000,000 USD",2026-07-15
+F-1316,Tidewater Real Estate Fund XII,Tidewater Partners,Real Estate,2023,"$25,000,000 USD",2025-07-27
+F-1317,Underwood Infrastructure Fund IV,Underwood Partners,Infrastructure,2022,"$7,500,000 USD",2026-01-14
+F-1318,Aldergrove Secondaries Fund VI,Aldergrove Capital,Secondaries,2008,TBD,2026-01-09
+F-1319,Northfield Fund of Funds Fund VIII,Northfield Capital,Fund of Funds,2014,"$12,500,000 USD",2026-06-08
+F-1320,Redstone Private Credit Fund VIII,Redstone Advisors,Private Credit,2020,"$500,000 USD",2025-09-06
+F-1321,Copperline Venture Capital Fund VII,Copperline Group,Venture Capital,2017,"$1,500,000.01 USD",2025-03-08
+F-1322,Longleaf Buyout Fund III,Longleaf Holdings,Buyout,2016,"$2,500,000 USD",2025-05-06
+F-1323,Yarrow Real Estate Fund VI,Yarrow Equity,Real Estate,2010,"$1,500,000 USD",2025-01-25
+F-1324,Ellsworth Private Credit Fund II,Ellsworth Group,Private Credit,2012,"$750,000 USD",2025-03-13
+F-1325,Windrow Growth Equity Fund VIII,Windrow Management,Growth Equity,2015,"$1,000,000 USD",2025-06-16
+F-1326,Belmont Venture Capital Fund I,Belmont Capital,Venture Capital,2012,"$1,250,000 USD",2026-02-11
+F-1327,Vesper Fund of Funds Fund X,Vesper Ventures,Fund of Funds,2016,"$750,000.25 USD",2025-11-08
+F-1328,Northfield Infrastructure Fund VI,Northfield Capital,Infrastructure,2009,"$10,000,000 USD",2025-02-12
+F-1329,Meridian Private Credit Fund XI,Meridian Equity,Private Credit,2022,"$50,000,000 USD",2025-03-27
+F-1330,Orchard Hill Buyout Fund II,Orchard Hill Group,Buyout,2015,,2025-05-06
+F-1331,Yarrow Secondaries Fund II,Yarrow Equity,Secondaries,2017,"$500,000",2025-03-10
+F-1332,Fairhaven Infrastructure Fund VIII,Fairhaven Ventures,Infrastructure,2017,"$50,000,000 USD",2026-06-18
+F-1333,Orchard Hill Buyout Fund IX,Orchard Hill Group,Buyout,2011,"$1,000,000 USD",2026-06-04
+F-1334,Brightwater Fund of Funds Fund XI,Brightwater Equity,Fund of Funds,2011,"$20,000,000 USD",2025-05-02
+F-1335,Vantage Fund of Funds Fund IV,Vantage Group,Fund of Funds,2023,12500000 USD,2025-04-16
+F-1336,Ellsworth Real Estate Fund VII,Ellsworth Group,Real Estate,2019,"$10,000,000 USD",2025-07-11
+F-1337,Kestrel Secondaries Fund V,Kestrel Equity,Secondaries,2014,"$1,500,000 USD",2025-02-22
+F-1338,Foxglove Secondaries Fund X,Foxglove Equity,Secondaries,2023,"$2,000,000 USD",2025-08-03
+F-1339,Belmont Fund of Funds Fund X,Belmont Capital,Fund of Funds,2010,"~$50,000,000 USD",2026-08-16
+F-1340,Pinehurst Real Estate Fund VI,Pinehurst Advisors,Real Estate,2012,"$500,000 USD",2025-11-06
+F-1341,Sable Creek Secondaries Fund VIII,Sable Creek Advisors,Secondaries,2009,"$12,500,000 USD",2026-02-07
+F-1342,Cardinal Growth Equity Fund XII,Cardinal Partners,Growth Equity,2009,"$750,000 USD",2025-03-12
+F-1343,Underwood Secondaries Fund XII,Underwood Partners,Secondaries,2009,Undisclosed,2026-03-22
+F-1344,Tidewater Real Estate Fund I,Tidewater Partners,Real Estate,2014,"$15,000,000 USD",2025-11-15
+F-1345,Harborview Real Estate Fund XII,Harborview Equity,Real Estate,2016,"$12,500,000 USD",2026-01-23
+F-1346,Underwood Buyout Fund VIII,Underwood Partners,Buyout,2011,"~$3,000,000 USD",2025-03-10
+F-1347,Redstone Growth Equity Fund II,Redstone Advisors,Growth Equity,2013,"$250,000 USD",2026-01-11
+F-1348,Vesper Private Credit Fund I,Vesper Ventures,Private Credit,2009,"$12,500,000.25 USD",2025-10-01
+F-1349,Cardinal Fund of Funds Fund II,Cardinal Partners,Fund of Funds,2019,"€750,000 EUR",2025-08-13
+F-1350,Orchard Hill Private Credit Fund XII,Orchard Hill Group,Private Credit,2011,"USD 20,000,000",2025-06-14
+F-1351,Tidewater Private Credit Fund VII,Tidewater Partners,Private Credit,2025,"$5,000,000 USD",2025-01-17
+F-1352,Dunmore Buyout Fund XII,Dunmore Advisors,Buyout,2014,"$500,000 USD",2026-04-19
+F-1353,Foxglove Venture Capital Fund I,Foxglove Equity,Venture Capital,2010,"$25,000,000 USD",2025-07-24
+F-1354,Yarrow Secondaries Fund VIII,Yarrow Equity,Secondaries,2015,"$7,500,000",2026-05-24
+F-1355,Ironwood Fund of Funds Fund I,Ironwood Ventures,Fund of Funds,2023,"$12,500,000 USD",2026-04-28
+F-1356,Longleaf Venture Capital Fund III,Longleaf Holdings,Venture Capital,2008,Not reported,2026-04-12
+F-1357,Cardinal Secondaries Fund IX,Cardinal Partners,Secondaries,2016,"$15,000,000 USD",2025-11-13
+F-1358,Sable Creek Private Credit Fund VIII,Sable Creek Advisors,Private Credit,2025,"£20,000,000 GBP",2026-05-10
+F-1359,Northfield Private Credit Fund V,Northfield Capital,Private Credit,2018,"$1,250,000 USD",2026-04-20
+F-1360,Vesper Secondaries Fund IV,Vesper Ventures,Secondaries,2012,"€1,250,000 EUR",2025-09-13
+F-1361,Wren Hollow Venture Capital Fund XI,Wren Hollow Capital,Venture Capital,2013,"$10,000,000 USD",2025-10-03
+F-1362,Ironwood Buyout Fund X,Ironwood Ventures,Buyout,2011,"$2,000,000 USD",2026-06-08
+F-1363,Sycamore Fund of Funds Fund IV,Sycamore Advisors,Fund of Funds,2011,"£12,500,000 GBP",2026-04-17
+F-1364,Ridgeline Fund of Funds Fund IV,Ridgeline Holdings,Fund of Funds,2017,"$250,000 USD",2026-08-13
+F-1365,Foxglove Real Estate Fund XI,Foxglove Equity,Real Estate,2009,1250000 USD,2026-08-11
+F-1366,Brightwater Real Estate Fund IV,Brightwater Equity,Real Estate,2022,"$750,000 USD",2026-08-11
+F-1367,Belmont Secondaries Fund XII,Belmont Capital,Secondaries,2015,"¥112,500,000 JPY",2025-12-11
+F-1368,Longleaf Buyout Fund VIII,Longleaf Holdings,Buyout,2019,"$20,000,000 USD",2025-12-01
+F-1369,Belmont Growth Equity Fund XI,Belmont Capital,Growth Equity,2015,"$1,250,000 USD",2025-02-03
+F-1370,Yarrow Venture Capital Fund VII,Yarrow Equity,Venture Capital,2010,"$3,000,000 USD",2025-10-05
+F-1371,Fairhaven Growth Equity Fund I,Fairhaven Ventures,Growth Equity,2010,"$3,000,000 USD",2025-03-05
+F-1372,Kestrel Private Credit Fund IV,Kestrel Equity,Private Credit,2011,"$50,000,000 USD",2026-04-19
+F-1373,Aldergrove Secondaries Fund XII,Aldergrove Capital,Secondaries,2013,"~$250,000 USD",2026-06-13
+F-1374,Granite Peak Fund of Funds Fund IV,Granite Peak Partners,Fund of Funds,2017,"$15,000,000 USD",2026-08-06
+F-1375,Ashford Growth Equity Fund VI,Ashford Management,Growth Equity,2015,"¥7,500,000,000 JPY",2025-07-25
+F-1376,Northfield Growth Equity Fund II,Northfield Capital,Growth Equity,2020,"$2,000,000 USD",2026-02-27
+F-1377,Marlowe Fund of Funds Fund X,Marlowe Ventures,Fund of Funds,2018,"$5,000,000 USD",2025-05-22
+F-1378,Harborview Venture Capital Fund VII,Harborview Equity,Venture Capital,2020,"$2,000,000 USD",2025-04-23
+F-1379,Belmont Fund of Funds Fund I,Belmont Capital,Fund of Funds,2021,"$50,000,000 USD",2025-03-17
+F-1380,Yarrow Infrastructure Fund III,Yarrow Equity,Infrastructure,2016,"$1,500,000 USD",2025-05-03
+F-1381,Carrick Real Estate Fund II,Carrick Management,Real Estate,2018,"$50,000,000 USD",2026-08-28
+F-1382,Silverthorn Buyout Fund XI,Silverthorn Ventures,Buyout,2008,"$20,000,000 USD",2026-07-06
+F-1383,Fairhaven Private Credit Fund VIII,Fairhaven Ventures,Private Credit,2020,"$2,500,000",2026-07-16
+F-1384,Ridgeline Growth Equity Fund VIII,Ridgeline Holdings,Growth Equity,2019,"$15,000,000 USD",2025-07-15
+F-1385,Windrow Venture Capital Fund II,Windrow Management,Venture Capital,2012,"$1,250,000 USD",2025-11-11
+F-1386,Tidewater Fund of Funds Fund IV,Tidewater Partners,Fund of Funds,2011,"$1,250,000 USD",2026-08-21
+F-1387,Ironwood Secondaries Fund VII,Ironwood Ventures,Secondaries,2010,"$2,500,000 USD",2025-01-02
+F-1388,Copperline Private Credit Fund XII,Copperline Group,Private Credit,2009,"$5,000,000 USD",2026-02-24
+F-1389,Northfield Growth Equity Fund V,Northfield Capital,Growth Equity,2008,"£1,250,000 GBP",2025-11-08
+F-1390,Harborview Secondaries Fund II,Harborview Equity,Secondaries,2020,"$7,500,000 USD",2025-06-10
+F-1391,Pinehurst Infrastructure Fund X,Pinehurst Advisors,Infrastructure,2010,"€50,000,000 EUR",2026-04-08
+F-1392,Thornbury Growth Equity Fund III,Thornbury Group,Growth Equity,2009,"$2,000,000 USD",2025-05-14
+F-1393,Silverthorn Secondaries Fund VI,Silverthorn Ventures,Secondaries,2015,50000000 USD,2026-07-02
+F-1394,Stonebridge Private Credit Fund II,Stonebridge Equity,Private Credit,2015,"$15,000,000 USD",2025-11-18
+F-1395,Harborview Venture Capital Fund III,Harborview Equity,Venture Capital,2021,"$40,000,000 USD",2025-09-04
+F-1396,Underwood Infrastructure Fund VII,Underwood Partners,Infrastructure,2020,"$250,000",2026-06-04
+F-1397,Halcyon Fund of Funds Fund X,Halcyon Group,Fund of Funds,2008,"$750,000 USD",2026-03-06
+F-1398,Thornbury Fund of Funds Fund XI,Thornbury Group,Fund of Funds,2024,"$500,000 USD",2026-08-08
+F-1399,Granite Peak Venture Capital Fund V,Granite Peak Partners,Venture Capital,2012,"$1,000,000 USD",2025-05-20
+F-1400,Ashford Infrastructure Fund II,Ashford Management,Infrastructure,2018,"$3,000,000 USD",2025-12-11
+F-1401,Silverthorn Infrastructure Fund XI,Silverthorn Ventures,Infrastructure,2018,"$50,000,000 USD",2025-09-05
+F-1402,Wren Hollow Growth Equity Fund VI,Wren Hollow Capital,Growth Equity,2020,"$1,000,000 USD",2026-01-03
+F-1403,Brightwater Buyout Fund XII,Brightwater Equity,Buyout,2008,"$20,000,000.01 USD",2025-07-24
+F-1404,Copperline Infrastructure Fund XI,Copperline Group,Infrastructure,2016,"$50,000,000 USD",2025-04-10
+F-1405,Vesper Growth Equity Fund XI,Vesper Ventures,Growth Equity,2022,"$1,250,000 USD",2026-03-23
+F-1406,Bellamy Fund of Funds Fund XII,Bellamy Group,Fund of Funds,2009,"€20,000,000 EUR",2026-04-26
+F-1407,Sycamore Venture Capital Fund VI,Sycamore Advisors,Venture Capital,2019,"$25,000,000 USD",2025-11-25
+F-1408,Foxglove Real Estate Fund VII,Foxglove Equity,Real Estate,2009,"$2,000,000 USD",2025-07-19
+F-1409,Sycamore Venture Capital Fund VI,Sycamore Advisors,Venture Capital,2011,"$20,000,000 USD",2026-05-13
+F-1410,Ellsworth Infrastructure Fund VII,Ellsworth Group,Infrastructure,2015,"$1,250,000 USD",2026-02-05
+F-1411,Ridgeline Growth Equity Fund III,Ridgeline Holdings,Growth Equity,2010,"£40,000,000 GBP",2026-01-23
+F-1412,Windrow Venture Capital Fund IV,Windrow Management,Venture Capital,2012,"$15,000,000 USD",2025-01-03
+F-1413,Carrick Fund of Funds Fund XI,Carrick Management,Fund of Funds,2018,"$5,000,000 USD",2026-06-10
+F-1414,Copperline Venture Capital Fund IX,Copperline Group,Venture Capital,2018,"$250,000 USD",2026-01-13
+F-1415,Sycamore Private Credit Fund III,Sycamore Advisors,Private Credit,2025,"$500,000 USD",2026-04-14
+F-1416,Fenwick Venture Capital Fund III,Fenwick Holdings,Venture Capital,2017,"£5,000,000 GBP",2025-12-17
+F-1417,Dunmore Secondaries Fund XII,Dunmore Advisors,Secondaries,2021,"$50,000,000 USD",2025-12-02
+F-1418,Longleaf Fund of Funds Fund VI,Longleaf Holdings,Fund of Funds,2010,"$2,000,000.01 USD",2026-04-10
+F-1419,Aldergrove Private Credit Fund I,Aldergrove Capital,Private Credit,2021,"$750,000.01 USD",2025-07-09
+F-1420,Sable Creek Secondaries Fund VII,Sable Creek Advisors,Secondaries,2010,"$5,000,000 USD",2026-05-02
+F-1421,Fairhaven Private Credit Fund VIII,Fairhaven Ventures,Private Credit,2012,"$1,500,000 USD",2026-08-13
+F-1422,Northfield Real Estate Fund IX,Northfield Capital,Real Estate,2012,"$7,500,000 USD",2025-08-02
+F-1423,Orchard Hill Infrastructure Fund III,Orchard Hill Group,Infrastructure,2019,"$500,000 USD",2026-05-26
+F-1424,Ellsworth Buyout Fund VIII,Ellsworth Group,Buyout,2016,"$2,500,000 USD",2026-08-13
+F-1425,Aldergrove Private Credit Fund IV,Aldergrove Capital,Private Credit,2015,"$7,500,000 USD",2025-05-26
+F-1426,Wren Hollow Fund of Funds Fund VI,Wren Hollow Capital,Fund of Funds,2017,"$1,250,000 USD",2026-05-10
+F-1427,Underwood Infrastructure Fund IV,Underwood Partners,Infrastructure,2025,"$250,000 USD",2025-05-27
+F-1428,Granite Peak Real Estate Fund VI,Granite Peak Partners,Real Estate,2009,"$2,500,000 USD",2025-02-02
+F-1429,Wren Hollow Buyout Fund X,Wren Hollow Capital,Buyout,2025,"$1,000,000 USD",2025-11-10
+F-1430,Copperline Fund of Funds Fund XI,Copperline Group,Fund of Funds,2018,"$5,000,000 USD",2026-07-25
+F-1431,Tidewater Fund of Funds Fund XII,Tidewater Partners,Fund of Funds,2017,"$50,000,000 USD",2026-07-08
+F-1432,Dunmore Growth Equity Fund IV,Dunmore Advisors,Growth Equity,2022,"$25,000,000 USD",2026-03-10
+F-1433,Yarrow Real Estate Fund XII,Yarrow Equity,Real Estate,2010,"$25,000,000 USD",2025-02-26
+F-1434,Stonebridge Venture Capital Fund VI,Stonebridge Equity,Venture Capital,2018,"$15,000,000",2025-11-12
+F-1435,Copperline Venture Capital Fund II,Copperline Group,Venture Capital,2017,"$25,000,000 USD",2026-08-04
+F-1436,Underwood Secondaries Fund I,Underwood Partners,Secondaries,2011,"$15,000,000 USD",2025-01-19
+F-1437,Kestrel Venture Capital Fund X,Kestrel Equity,Venture Capital,2010,"$3,000,000 USD",2025-06-25
+F-1438,Kestrel Infrastructure Fund VI,Kestrel Equity,Infrastructure,2013,"$750,000 USD",2026-01-26
+F-1439,Ridgeline Infrastructure Fund I,Ridgeline Holdings,Infrastructure,2023,"$250,000 USD",2026-04-16
+F-1440,Ellsworth Buyout Fund VIII,Ellsworth Group,Buyout,2024,"$7,500,000 USD",2025-12-16
+F-1441,Windrow Fund of Funds Fund VII,Windrow Management,Fund of Funds,2010,"$12,500,000 USD",2025-01-15
+F-1442,Copperline Real Estate Fund VI,Copperline Group,Real Estate,2019,"$250,000 USD",2026-03-28
+F-1443,Redstone Secondaries Fund VI,Redstone Advisors,Secondaries,2018,"$750,000 USD",2025-10-13
+F-1444,Tidewater Real Estate Fund XII,Tidewater Partners,Real Estate,2015,500000 USD,2025-04-17
+F-1445,Sycamore Secondaries Fund II,Sycamore Advisors,Secondaries,2022,"$250,000 USD",2025-05-15
+F-1446,Fairhaven Buyout Fund V,Fairhaven Ventures,Buyout,2020,"$40,000,000 USD",2025-08-03
+F-1447,Brightwater Secondaries Fund VII,Brightwater Equity,Secondaries,2017,"€10,000,000 EUR",2026-07-23
+F-1448,Wren Hollow Secondaries Fund IX,Wren Hollow Capital,Secondaries,2020,"$750,000 USD",2025-03-15
+F-1449,Granite Peak Infrastructure Fund II,Granite Peak Partners,Infrastructure,2022,"$1,250,000 USD",2026-06-26
+F-1450,Copperline Buyout Fund VIII,Copperline Group,Buyout,2008,,2025-11-23
+F-1451,Dunmore Venture Capital Fund XII,Dunmore Advisors,Venture Capital,2017,"  $12,500,000 USD  ",2025-09-24
+F-1452,Carrick Venture Capital Fund I,Carrick Management,Venture Capital,2019,"$1,250,000 USD",2025-03-16
+F-1453,Yarrow Secondaries Fund II,Yarrow Equity,Secondaries,2023,"$25,000,000 USD",2025-12-02
+F-1454,Granite Peak Private Credit Fund IX,Granite Peak Partners,Private Credit,2016,"£20,000,000 GBP",2026-08-28
+F-1455,Granite Peak Secondaries Fund V,Granite Peak Partners,Secondaries,2012,"£2,500,000 GBP",2025-08-08
+F-1456,Kestrel Secondaries Fund XI,Kestrel Equity,Secondaries,2024,"$1,500,000.75 USD",2026-06-16
+F-1457,Dunmore Infrastructure Fund III,Dunmore Advisors,Infrastructure,2016,"$10,000,000 USD",2026-01-20
+F-1458,Redstone Venture Capital Fund XI,Redstone Advisors,Venture Capital,2018,Not reported,2025-04-14
+F-1459,Kestrel Private Credit Fund II,Kestrel Equity,Private Credit,2017,"~$20,000,000 USD",2025-09-25
+F-1460,Sable Creek Buyout Fund IX,Sable Creek Advisors,Buyout,2015,"$5,000,000 USD",2025-11-28
+F-1461,Aldergrove Venture Capital Fund VIII,Aldergrove Capital,Venture Capital,2019,"$1,250,000 USD",2025-03-03
+F-1462,Longleaf Buyout Fund VII,Longleaf Holdings,Buyout,2020,"€20,000,000 EUR",2025-06-08
+F-1463,Windrow Fund of Funds Fund II,Windrow Management,Fund of Funds,2024,"$10,000,000 USD",2026-06-25
+F-1464,Underwood Growth Equity Fund III,Underwood Partners,Growth Equity,2019,"$2,000,000 USD",2025-11-23
+F-1465,Meridian Secondaries Fund IX,Meridian Equity,Secondaries,2012,"$15,000,000 USD",2025-05-17
+F-1466,Pinehurst Growth Equity Fund V,Pinehurst Advisors,Growth Equity,2017,,2026-07-03
+F-1467,Marlowe Fund of Funds Fund II,Marlowe Ventures,Fund of Funds,2009,"$50,000,000 USD",2025-07-27
+F-1468,Ellsworth Growth Equity Fund VII,Ellsworth Group,Growth Equity,2011,"$500,000 USD",2026-08-21
+F-1469,Meridian Real Estate Fund V,Meridian Equity,Real Estate,2021,"$3,000,000.50 USD",2025-03-06
+F-1470,Silverthorn Private Credit Fund X,Silverthorn Ventures,Private Credit,2013,"$40,000,000 USD",2026-02-06
+F-1471,Brightwater Buyout Fund IX,Brightwater Equity,Buyout,2010,"$250,000 USD",2026-05-28
+F-1472,Meridian Venture Capital Fund IV,Meridian Equity,Venture Capital,2019,"$50,000,000 USD",2025-08-15
+F-1473,Northfield Fund of Funds Fund X,Northfield Capital,Fund of Funds,2013,"$10,000,000 USD",2026-07-22
+F-1474,Fenwick Secondaries Fund I,Fenwick Holdings,Secondaries,2010,"$1,000,000 USD",2025-12-03
+F-1475,Sable Creek Real Estate Fund I,Sable Creek Advisors,Real Estate,2025,"$12,500,000 usd",2025-07-25
+F-1476,Copperline Buyout Fund IX,Copperline Group,Buyout,2012,10000000 USD,2026-01-22
+F-1477,Stonebridge Infrastructure Fund I,Stonebridge Equity,Infrastructure,2023,"£2,500,000 GBP",2026-01-14
+F-1478,Sable Creek Fund of Funds Fund VII,Sable Creek Advisors,Fund of Funds,2019,"$2,000,000.01 USD",2025-09-22
+F-1479,Ellsworth Real Estate Fund IX,Ellsworth Group,Real Estate,2015,"USD 750,000",2026-03-27
+F-1480,Thornbury Fund of Funds Fund II,Thornbury Group,Fund of Funds,2017,"$1,000,000 usd",2025-08-12
+F-1481,Blackwater Private Credit Fund XI,Blackwater Ventures,Private Credit,2017,"$50,000,000 USD",2026-04-11
+F-1482,Ashford Infrastructure Fund XII,Ashford Management,Infrastructure,2019,"$250,000 USD",2025-10-03
+F-1483,Orchard Hill Real Estate Fund V,Orchard Hill Group,Real Estate,2025,"  $15,000,000 USD  ",2025-06-01
+F-1484,Thornbury Growth Equity Fund VII,Thornbury Group,Growth Equity,2016,"¥450,000,000 JPY",2025-08-28
+F-1485,Vesper Growth Equity Fund VII,Vesper Ventures,Growth Equity,2010,"$20,000,000 USD",2026-06-23
+F-1486,Foxglove Private Credit Fund III,Foxglove Equity,Private Credit,2013,"$1,000,000 USD",2025-09-02
+F-1487,Kestrel Venture Capital Fund XI,Kestrel Equity,Venture Capital,2008,"$12,500,000",2025-09-10
+F-1488,Vesper Buyout Fund VIII,Vesper Ventures,Buyout,2017,"€10,000,000 EUR",2025-10-12
+F-1489,Ironwood Buyout Fund XI,Ironwood Ventures,Buyout,2008,"$25,000,000 USD",2025-12-09
+F-1490,Kestrel Fund of Funds Fund XII,Kestrel Equity,Fund of Funds,2025,"$25,000,000 USD",2025-06-01
+F-1491,Quarry Lane Fund of Funds Fund IX,Quarry Lane Holdings,Fund of Funds,2022,,2025-02-25
+F-1492,Vantage Growth Equity Fund XII,Vantage Group,Growth Equity,2018,"USD 20,000,000",2025-06-05
+F-1493,Sable Creek Infrastructure Fund V,Sable Creek Advisors,Infrastructure,2017,"$1,500,000 USD",2025-01-24
+F-1494,Vesper Buyout Fund III,Vesper Ventures,Buyout,2014,"$2,500,000 USD",2026-06-09
+F-1495,Vesper Secondaries Fund XI,Vesper Ventures,Secondaries,2021,"$1,250,000.01 USD",2026-06-17
+F-1496,Vantage Infrastructure Fund X,Vantage Group,Infrastructure,2024,"$2,000,000 USD",2026-01-02
+F-1497,Fairhaven Private Credit Fund III,Fairhaven Ventures,Private Credit,2023,,2026-03-13
+F-1498,Granite Peak Real Estate Fund IX,Granite Peak Partners,Real Estate,2018,"$20,000,000 USD",2025-06-12
+F-1499,Granite Peak Growth Equity Fund X,Granite Peak Partners,Growth Equity,2021,"$1,250,000.75 USD",2026-06-16
+F-1500,Vesper Secondaries Fund XII,Vesper Ventures,Secondaries,2010,"$1,500,000 USD",2026-08-13
