@@ -11,8 +11,14 @@ export interface Fund {
 export interface FundsResponse {
   funds: Fund[];
   total: number;
-  limit: number;
+  limit: number | null;
   offset: number;
+}
+
+export interface FundsQuery {
+  strategy?: string;
+  limit?: number;
+  offset?: number;
 }
 
 const BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
@@ -27,9 +33,11 @@ async function getJson<T>(path: string, params?: Record<string, string>): Promis
   return res.json() as Promise<T>;
 }
 
-export function fetchFunds(strategy?: string): Promise<FundsResponse> {
-  const params: Record<string, string> = { limit: "500" };
+export function fetchFunds({ strategy, limit, offset }: FundsQuery = {}): Promise<FundsResponse> {
+  const params: Record<string, string> = {};
   if (strategy) params.strategy = strategy;
+  if (limit != null) params.limit = String(limit);
+  if (offset) params.offset = String(offset);
   return getJson<FundsResponse>("/funds", params);
 }
 
