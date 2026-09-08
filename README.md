@@ -3,10 +3,18 @@
 Full-stack assessment project: a minimal app over `funds.csv` — Postgres, a
 Python (FastAPI) API, and a React frontend.
 
-This branch (`migrate-column-2`) is **Part 2 — migrate the column**. It adds
-`commitment_cents` (bigint) + `currency` (char(3)) next to the raw `commitment`
-text and serves the parsed values. The raw column is kept so Step 1 instances keep
-working through a rolling deploy; dropping it is Step 3.
+This branch (`drop-raw-commitment-3`) is **Part 2, Step 3 — contract**. It drops
+the raw `commitment` column (and the sync trigger); `commitment_cents` + `currency`
+are the money representation. The migration sequence:
+
+| Step | Branch                  | Change                                                                          |
+| ---- | ----------------------- | ------------------------------------------------------------------------------- |
+| 1    | `standup-app-1`         | `commitment` loaded as raw text                                                 |
+| 2    | `migrate-column-2`      | add `commitment_cents` + `currency` (backfilled), serve them, keep `commitment` |
+| 3    | `drop-raw-commitment-3` | drop `commitment` + trigger; `seed.py` parses via a staging table               |
+
+Each step is safe under a rolling deploy because the previous step's code serves
+correct traffic against the current step's schema.
 
 ## Stack
 
@@ -76,31 +84,34 @@ string.
 ```text
 funds(
   fund_id text pk, fund_name text, manager text, strategy text,
-  vintage_year int, commitment text NULL,
-  commitment_cents bigint NULL, currency char(3) NULL,
+  vintage_year int, commitment_cents bigint NULL, currency char(3) NULL,
   reported_at date
 )
 ```
 
 - `0001` — baseline table with raw `commitment` text.
 - `0002` — `parse_commitment(text)` (one PL/pgSQL parser), the `commitment_cents` /
-  `currency` columns, a `BEFORE INSERT OR UPDATE` trigger that keeps them synced
-  (so `make seed`'s `COPY` fills them), and a one-time backfill of existing rows.
+  `currency` columns, a `BEFORE INSERT OR UPDATE` sync trigger, and a one-time
+  backfill of existing rows.
+- `0003` — drop the sync trigger + the raw `commitment` column. `parse_commitment()`
+  stays; `seed.py` COPYs the CSV into a temp table and inserts through it.
 
 ### Rolling-deploy safety
 
-`0002` is purely additive — nothing renamed or dropped — so Step 1 code still
-reading `commitment` serves correct traffic against this schema while Step 2 code
-reads the new columns. Replay:
+Every step's migration is safe against the previous step's running code:
+
+- `0002` is purely additive, so Step 1 code still reading `commitment` works.
+- `0003` only drops `commitment`, which Step 2 code already stopped selecting.
+
+Replay any adjacent pair against one DB:
 
 ```sh
-git switch standup-app-1 && make seed && make serve PORT=8000   # old code
-git switch migrate-column-2 && make migrate && make serve PORT=8001   # same DB
-curl localhost:8000/funds   # still works — commitment column untouched
+git switch migrate-column-2 && make seed && make serve PORT=8000    # step 2 code
+git switch drop-raw-commitment-3 && make migrate && make serve PORT=8001   # same DB
+curl localhost:8000/funds   # step 2 still serves correct traffic
 ```
 
 ## Out of scope for Part 2
 
-Dropping the raw `commitment` column + trigger and moving parsing into `seed.py`
-(**Step 3**); `NOT NULL` on the new columns (25 rows are legitimately null); auth;
+`NOT NULL` on `commitment_cents` / `currency` (25 rows are legitimately null); auth;
 CI; FX/rounding beyond × 100.

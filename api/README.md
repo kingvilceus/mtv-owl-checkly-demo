@@ -42,6 +42,7 @@ DATABASE_URL=postgresql://owl:owl@localhost:5432/owl \
 
 ## Notes
 
-- The `Fund` model deliberately does **not** map the raw `commitment` column, so
-  no query selects it — that keeps the later "drop `commitment`" migration safe.
+- The `Fund` model deliberately never mapped the raw `commitment` column, so no
+  query selected it — which is what let migration `0003` drop it without a code
+  change here.
 - Parser tests live in [`../tests/`](../tests/) and run with `make test`.
