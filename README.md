@@ -3,8 +3,10 @@
 Full-stack assessment project: a minimal app over `funds.csv` — Postgres, a
 Python (FastAPI) API, and a React frontend.
 
-This branch (`standup-app-1`) is **Part 1 — stand up the app**. The `commitment`
-column is loaded as raw text and is not parsed; that comes in a later step.
+This branch (`migrate-column-2`) is **Part 2 — migrate the column**. It adds
+`commitment_cents` (bigint) + `currency` (char(3)) next to the raw `commitment`
+text and serves the parsed values. The raw column is kept so Step 1 instances keep
+working through a rolling deploy; dropping it is Step 3.
 
 ## Stack
 
@@ -50,6 +52,7 @@ curl localhost:8000/funds/F-1001
 | `make web`                 | run the React dev server                            |
 | `make up` / `make down`    | start / tear down the whole stack                   |
 | `make psql`                | psql shell on the app database                      |
+| `make test`                | migrate, then run the parser unit tests             |
 | `make hooks` / `make lint` | install / run the pre-commit hooks                  |
 
 `DATABASE_URL` (env or `make DATABASE_URL=… <target>`) overrides the target
@@ -64,18 +67,40 @@ database, so two checkouts can be pointed at one Postgres to compare behavior.
 | GET    | `/funds/{fund_id}` | 404 if unknown                                     |
 | GET    | `/strategies`      | distinct strategy values (for the filter)          |
 
-`commitment` is returned as the exact stored string (or `null` when blank).
+`/funds` returns `commitment_cents` (minor units, **always × 100**, JPY included)
+and `currency` (ISO code, or `null`). It no longer returns the raw `commitment`
+string.
 
-## Schema (migration `0001`)
+## Schema
 
 ```text
 funds(
   fund_id text pk, fund_name text, manager text, strategy text,
-  vintage_year int, commitment text NULL, reported_at date
+  vintage_year int, commitment text NULL,
+  commitment_cents bigint NULL, currency char(3) NULL,
+  reported_at date
 )
 ```
 
-## Out of scope for Part 1
+- `0001` — baseline table with raw `commitment` text.
+- `0002` — `parse_commitment(text)` (one PL/pgSQL parser), the `commitment_cents` /
+  `currency` columns, a `BEFORE INSERT OR UPDATE` trigger that keeps them synced
+  (so `make seed`'s `COPY` fills them), and a one-time backfill of existing rows.
 
-`commitment` parsing/normalization (Part 2), auth, CI, production web serving,
-and tests beyond the seed/health smoke check.
+### Rolling-deploy safety
+
+`0002` is purely additive — nothing renamed or dropped — so Step 1 code still
+reading `commitment` serves correct traffic against this schema while Step 2 code
+reads the new columns. Replay:
+
+```sh
+git switch standup-app-1 && make seed && make serve PORT=8000   # old code
+git switch migrate-column-2 && make migrate && make serve PORT=8001   # same DB
+curl localhost:8000/funds   # still works — commitment column untouched
+```
+
+## Out of scope for Part 2
+
+Dropping the raw `commitment` column + trigger and moving parsing into `seed.py`
+(**Step 3**); `NOT NULL` on the new columns (25 rows are legitimately null); auth;
+CI; FX/rounding beyond × 100.
