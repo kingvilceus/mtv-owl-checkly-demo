@@ -10,13 +10,13 @@ working through a rolling deploy; dropping it is Step 3.
 
 ## Stack
 
-| Piece             | What                                                                                      |
-| ----------------- | ----------------------------------------------------------------------------------------- |
-| `db`              | Postgres 16 (Docker)                                                                      |
-| `api/`            | FastAPI + SQLAlchemy, read-only endpoints over `funds`                                    |
-| `web/`            | Vite + React + TypeScript, one table view                                                 |
-| `db/migrations/`  | SQL migrations applied with [yoyo-migrations](https://ollycope.com/software/yoyo/latest/) |
-| `scripts/seed.py` | drop/recreate DB → migrate → load the CSV                                                 |
+| Piece                   | What                                                                                            |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| `db` (container)        | Postgres 16                                                                                     |
+| [`api/`](api/README.md) | FastAPI + SQLAlchemy, read-only endpoints over `funds`                                          |
+| [`web/`](web/README.md) | Vite + React + TypeScript, one table view                                                       |
+| [`db/`](db/README.md)   | schema + migrations, applied with [yoyo-migrations](https://ollycope.com/software/yoyo/latest/) |
+| `scripts/seed.py`       | drop/recreate DB → migrate → load the CSV                                                       |
 
 Everything runs in Docker Compose (project name `owl-fs`).
 
