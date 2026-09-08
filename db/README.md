@@ -17,18 +17,20 @@ yoyo applies files in filename order and records what it has run in
 
 ## Migrations
 
-| #      | Adds                                                                                               |
-| ------ | -------------------------------------------------------------------------------------------------- |
-| `0001` | `funds` table (raw `commitment` as `text`), `funds_strategy_idx`                                   |
-| `0002` | `parse_commitment(text)`, `commitment_cents` + `currency`, a sync trigger, and a one-time backfill |
+| #      | Change                                                                                       |
+| ------ | -------------------------------------------------------------------------------------------- |
+| `0001` | `funds` table (raw `commitment` as `text`), `funds_strategy_idx`                             |
+| `0002` | `parse_commitment(text)`, `commitment_cents` + `currency`, a sync trigger, one-time backfill |
+| `0003` | drop the sync trigger + raw `commitment` column (keep `parse_commitment`)                    |
 
 ### `parse_commitment(raw text) -> (commitment_cents bigint, currency char(3))`
 
 The single source of truth for turning a raw commitment string
 (`"$15,000,000 USD"`, `"USD 10,000,000"`, `"~$1,000,000 USD"`, …) into
 `(amount × 100, ISO code)`. Non-numeric / blank → `(NULL, NULL)`. Used by the
-`funds_sync_commitment` trigger (so `make seed`'s `COPY` fills the columns) and by
-the `0002` backfill.
+`0002` sync trigger and backfill, and (once `0003` drops the raw column) by
+`seed.py`, which COPYs the CSV into a temp table and inserts through
+`parse_commitment()`.
 
 ## Commands
 
