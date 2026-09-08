@@ -13,7 +13,7 @@ working through a rolling deploy; dropping it is Step 3.
 | Piece             | What                                                                                      |
 | ----------------- | ----------------------------------------------------------------------------------------- |
 | `db`              | Postgres 16 (Docker)                                                                      |
-| `api/`            | FastAPI + psycopg, read-only endpoints over `funds`                                       |
+| `api/`            | FastAPI + SQLAlchemy, read-only endpoints over `funds`                                    |
 | `web/`            | Vite + React + TypeScript, one table view                                                 |
 | `db/migrations/`  | SQL migrations applied with [yoyo-migrations](https://ollycope.com/software/yoyo/latest/) |
 | `scripts/seed.py` | drop/recreate DB → migrate → load the CSV                                                 |
