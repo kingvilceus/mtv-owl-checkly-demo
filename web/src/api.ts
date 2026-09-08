@@ -4,8 +4,24 @@ export interface Fund {
   manager: string;
   strategy: string;
   vintage_year: number;
-  commitment: string | null;
+  commitment_cents: number | null;
+  currency: string | null;
   reported_at: string;
+}
+
+/** Render commitment_cents (minor units, always x100) + currency for display. */
+export function formatCommitment(cents: number | null, currency: string | null): string {
+  if (cents == null || !currency) return "—";
+  const amount = cents / 100;
+  const code = currency.trim();
+  try {
+    return new Intl.NumberFormat(undefined, {
+      style: "currency",
+      currency: code,
+    }).format(amount);
+  } catch {
+    return `${amount.toLocaleString()} ${code}`;
+  }
 }
 
 export interface FundsResponse {
