@@ -5,9 +5,9 @@ PORT ?= 8000
 DATABASE_URL ?= postgresql://owl:owl@db:5432/owl
 COMPOSE ?= docker compose
 COMPOSE_ENV = API_HOST_PORT=$(PORT) DATABASE_URL=$(DATABASE_URL)
-API_RUN = $(COMPOSE) run --rm -e DATABASE_URL=$(DATABASE_URL) api
+API_RUN = $(COMPOSE) run --rm --build -e DATABASE_URL=$(DATABASE_URL) api
 
-.PHONY: help hooks lint seed migrate serve web up down psql
+.PHONY: help hooks lint seed migrate serve web up down psql test
 
 help: ## Show this help
 	@grep -hE '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
@@ -26,6 +26,10 @@ seed: ## Drop & recreate the database, run migrations, load funds.csv
 migrate: ## Apply every migration up to the current checkout
 	$(COMPOSE) up -d --wait db
 	$(API_RUN) yoyo apply --batch --database "$(DATABASE_URL)"
+
+test: ## Run the test suite (migrates first; parser unit tests)
+	$(COMPOSE) up -d --wait db
+	$(API_RUN) sh -c 'yoyo apply --batch --database "$(DATABASE_URL)" && pytest -q'
 
 serve: ## Run the API on PORT (default 8000)
 	$(COMPOSE_ENV) $(COMPOSE) up api

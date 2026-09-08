@@ -4,3 +4,4 @@ psycopg[binary]==3.2.3
 # yoyo's default postgresql:// backend uses psycopg2; keep the app itself on psycopg3.
 psycopg2-binary==2.9.10
 yoyo-migrations==9.0.0
+pytest==8.3.4
