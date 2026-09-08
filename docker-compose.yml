@@ -1,0 +1,62 @@
+name: owl-fs
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-owl}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-owl}
+      POSTGRES_DB: ${POSTGRES_DB:-owl}
+    ports:
+      - "${POSTGRES_HOST_PORT:-5432}:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-owl} -d ${POSTGRES_DB:-owl}"]
+      interval: 2s
+      timeout: 3s
+      retries: 40
+
+  api:
+    build: ./api
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql://owl:owl@db:5432/owl}
+    env_file:
+      - path: .env
+        required: false
+    ports:
+      - "${API_HOST_PORT:-8000}:8000"
+    volumes:
+      - ./:/app
+    depends_on:
+      db:
+        condition: service_healthy
+    command:
+      [
+        "uvicorn",
+        "app.main:app",
+        "--app-dir",
+        "api",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000",
+        "--reload",
+      ]
+
+  web:
+    build: ./web
+    environment:
+      VITE_API_URL: ${VITE_API_URL:-http://localhost:8000}
+    ports:
+      - "${WEB_HOST_PORT:-5173}:5173"
+    volumes:
+      - ./web:/app
+      - web-node-modules:/app/node_modules
+    depends_on:
+      - api
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+
+volumes:
+  db-data:
+  web-node-modules:
