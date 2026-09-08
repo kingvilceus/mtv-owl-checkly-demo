@@ -1,6 +1,7 @@
 """Minimal read-only API over the funds table.
 
-``commitment`` is returned exactly as it was loaded (raw text); no parsing here.
+Serves the parsed money columns (``commitment_cents`` + ``currency``). It never
+reads the raw ``commitment`` column, so a later step can drop it safely.
 """
 
 from __future__ import annotations
@@ -22,7 +23,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-FUND_COLUMNS = "fund_id, fund_name, manager, strategy, vintage_year, commitment, reported_at"
+FUND_COLUMNS = (
+    "fund_id, fund_name, manager, strategy, vintage_year, commitment_cents, currency, reported_at"
+)
 
 
 @app.get("/health")
