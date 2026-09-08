@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchFunds, fetchStrategies, type Fund } from "./api";
+import { fetchFunds, fetchStrategies, formatCommitment, type Fund } from "./api";
 
 const PAGE_SIZES = [10, 30, 50] as const;
 type PageSize = (typeof PAGE_SIZES)[number] | "all";
@@ -130,7 +130,7 @@ export default function App() {
                     <th>Manager</th>
                     <th>Strategy</th>
                     <th>Vintage</th>
-                    <th>Commitment (raw)</th>
+                    <th>Commitment</th>
                     <th>Reported</th>
                   </tr>
                 </thead>
@@ -144,7 +144,9 @@ export default function App() {
                         <span className="pill">{f.strategy}</span>
                       </td>
                       <td>{f.vintage_year}</td>
-                      <td className="commitment">{f.commitment ?? "—"}</td>
+                      <td className="commitment">
+                        {formatCommitment(f.commitment_cents, f.currency)}
+                      </td>
                       <td>{f.reported_at}</td>
                     </tr>
                   ))}

@@ -12,5 +12,9 @@ select = ["E", "F", "I", "UP", "B", "SIM", "C4", "N"]
 # seed / scripts are CLIs; print is intentional
 "scripts/*" = ["T201"]
 
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI's dependency markers are called in argument defaults by design.
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.Path"]
+
 [tool.ruff.format]
 quote-style = "double"

@@ -1,18 +1,21 @@
-"""Minimal read-only API over the funds table.
+"""Minimal read-only API over the funds table (SQLAlchemy).
 
-``commitment`` is returned exactly as it was loaded (raw text); no parsing here.
+Serves the parsed money columns (``commitment_cents`` + ``currency``). It never
+reads the raw ``commitment`` column, so a later step can drop it safely.
 """
 
 from __future__ import annotations
 
-from typing import Any
-
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import func, select, text
+from sqlalchemy.orm import Session
 
-from app.db import connect
+from app.db import get_session
+from app.models import Fund
+from app.schemas import FundOut, FundsPage
 
-app = FastAPI(title="OWL Funds API", version="0.1.0")
+app = FastAPI(title="OWL Funds API", version="0.2.0")
 
 # Wide-open CORS: this is a local dev tool, not a deployed service.
 app.add_middleware(
@@ -22,56 +25,42 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-FUND_COLUMNS = "fund_id, fund_name, manager, strategy, vintage_year, commitment, reported_at"
-
 
 @app.get("/health")
-def health() -> dict[str, str]:
-    with connect() as conn:
-        conn.execute("SELECT 1")
+def health(session: Session = Depends(get_session)) -> dict[str, str]:
+    session.execute(text("SELECT 1"))
     return {"status": "ok"}
 
 
 @app.get("/strategies")
-def strategies() -> dict[str, list[str]]:
-    with connect() as conn:
-        rows = conn.execute("SELECT DISTINCT strategy FROM funds ORDER BY strategy").fetchall()
-    return {"strategies": [row["strategy"] for row in rows]}
+def strategies(session: Session = Depends(get_session)) -> dict[str, list[str]]:
+    rows = session.scalars(select(Fund.strategy).distinct().order_by(Fund.strategy)).all()
+    return {"strategies": list(rows)}
 
 
-@app.get("/funds")
+@app.get("/funds", response_model=FundsPage)
 def list_funds(
+    session: Session = Depends(get_session),
     strategy: str | None = None,
     limit: int | None = Query(default=None, ge=1),
     offset: int = Query(default=0, ge=0),
-) -> dict[str, Any]:
+) -> FundsPage:
     """List funds. Omit ``limit`` to return every matching row."""
-    filters: list[str] = []
-    args: list[Any] = []
-    if strategy:
-        filters.append("strategy = %s")
-        args.append(strategy)
-    where = f"WHERE {' AND '.join(filters)}" if filters else ""
+    where = (Fund.strategy == strategy,) if strategy else ()
 
-    limit_sql = "LIMIT ALL" if limit is None else "LIMIT %s"
-    row_args = [*args, *([] if limit is None else [limit]), offset]
+    total = session.scalar(select(func.count()).select_from(Fund).where(*where)) or 0
 
-    with connect() as conn:
-        total = conn.execute(f"SELECT count(*) AS n FROM funds {where}", args).fetchone()["n"]
-        rows = conn.execute(
-            f"SELECT {FUND_COLUMNS} FROM funds {where} ORDER BY fund_id {limit_sql} OFFSET %s",
-            row_args,
-        ).fetchall()
+    stmt = select(Fund).where(*where).order_by(Fund.fund_id).offset(offset)
+    if limit is not None:
+        stmt = stmt.limit(limit)
+    funds = session.scalars(stmt).all()
 
-    return {"funds": rows, "total": total, "limit": limit, "offset": offset}
+    return FundsPage(funds=list(funds), total=total, limit=limit, offset=offset)
 
 
-@app.get("/funds/{fund_id}")
-def get_fund(fund_id: str) -> dict[str, Any]:
-    with connect() as conn:
-        row = conn.execute(
-            f"SELECT {FUND_COLUMNS} FROM funds WHERE fund_id = %s", [fund_id]
-        ).fetchone()
-    if row is None:
+@app.get("/funds/{fund_id}", response_model=FundOut)
+def get_fund(fund_id: str, session: Session = Depends(get_session)) -> Fund:
+    fund = session.get(Fund, fund_id)
+    if fund is None:
         raise HTTPException(status_code=404, detail="fund not found")
-    return row
+    return fund
