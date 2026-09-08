@@ -1,8 +1,9 @@
 """Drop and recreate the database, apply every migration, load ``funds.csv``.
 
 Invoked by ``make seed`` inside the api container. Honors ``DATABASE_URL`` so it
-can target any Postgres instance. ``commitment`` is loaded as raw text exactly as
-it appears in the CSV; a blank value becomes NULL.
+can target any Postgres instance. The CSV's raw ``commitment`` text is loaded into
+a temp table and turned into ``commitment_cents`` + ``currency`` by the same
+``parse_commitment()`` SQL function the migrations use.
 """
 
 from __future__ import annotations
@@ -18,7 +19,9 @@ from psycopg import sql
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = REPO_ROOT / "data" / "funds.csv"
-COLUMNS = (
+
+# Columns as they appear in funds.csv (still includes the raw `commitment`).
+CSV_COLUMNS = (
     "fund_id",
     "fund_name",
     "manager",
@@ -61,28 +64,55 @@ def apply_migrations() -> None:
     )
 
 
+STAGING_DDL = """
+CREATE TEMP TABLE funds_import (
+    fund_id text,
+    fund_name text,
+    manager text,
+    strategy text,
+    vintage_year integer,
+    commitment text,
+    reported_at date
+)
+"""
+
+INSERT_FROM_STAGING = """
+INSERT INTO funds (
+    fund_id, fund_name, manager, strategy, vintage_year,
+    commitment_cents, currency, reported_at
+)
+SELECT
+    i.fund_id, i.fund_name, i.manager, i.strategy, i.vintage_year,
+    p.commitment_cents, p.currency, i.reported_at
+FROM funds_import AS i, LATERAL parse_commitment(i.commitment) AS p
+"""
+
+
 def load_csv() -> int:
-    copy_sql = f"COPY funds ({', '.join(COLUMNS)}) FROM STDIN"
+    copy_sql = f"COPY funds_import ({', '.join(CSV_COLUMNS)}) FROM STDIN"
     count = 0
     with (
         CSV_PATH.open(newline="", encoding="utf-8") as fh,
         psycopg.connect(DATABASE_URL) as conn,
     ):
         reader = csv.DictReader(fh)
-        with conn.cursor() as cur, cur.copy(copy_sql) as copy:
-            for row in reader:
-                copy.write_row(
-                    (
-                        row["fund_id"],
-                        row["fund_name"],
-                        row["manager"],
-                        row["strategy"],
-                        int(row["vintage_year"]),
-                        row["commitment"] or None,
-                        row["reported_at"],
+        with conn.cursor() as cur:
+            cur.execute(STAGING_DDL)
+            with cur.copy(copy_sql) as copy:
+                for row in reader:
+                    copy.write_row(
+                        (
+                            row["fund_id"],
+                            row["fund_name"],
+                            row["manager"],
+                            row["strategy"],
+                            int(row["vintage_year"]),
+                            row["commitment"] or None,
+                            row["reported_at"],
+                        )
                     )
-                )
-                count += 1
+                    count += 1
+            cur.execute(INSERT_FROM_STAGING)
         conn.commit()
     return count
 
