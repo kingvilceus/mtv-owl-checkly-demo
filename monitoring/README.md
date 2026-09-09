@@ -24,26 +24,29 @@ on the compose network that executes the checks against `http://api:8000`.
 | `GET /funds`        | `/funds?limit=5`                 | 200, `$.total > 0`, `$.funds` not empty |
 | `GET /funds` filter | `/funds?strategy=Infrastructure` | 200, first row's `strategy` matches     |
 | `GET /funds/F-1001` | `/funds/F-1001`                  | 200, `$.fund_id == "F-1001"`            |
-| `GET /funds/<bad>`  | `/funds/does-not-exist`          | 404                                     |
+| `GET /funds/<bad>`  | `/funds/does-not-exist`          | `shouldFail`, status is exactly 404     |
 | `GET /strategies`   | `/strategies`                    | 200, `$.strategies` not empty           |
 
 Assertions stay on fields that survive every migration step (`fund_id`, `total`,
 `strategy`, status codes), so the checks don't break when the `commitment`
-columns change.
+columns change. The 404 check sets `shouldFail: true` because Checkly fails an API
+check on any `>= 400` response before assertions run.
 
 ## One-time setup
 
 1. Sign up at [checklyhq.com](https://www.checklyhq.com/) (free trial).
 2. **Private Location:** dashboard → Private Locations → _New_. Name it
    `owl-fs-local`; copy the agent key (`pl_...`, shown once).
-3. **Account credentials:** dashboard → User Settings → API Keys (`CHECKLY_API_KEY`)
-   and Account Settings → General (`CHECKLY_ACCOUNT_ID`). Or run `npx checkly login`.
+3. **Account credentials** for the CLI: a **user** API key (`cu_...`, from User
+   Settings → API keys — _not_ the `pl_` location key) and the account id (it's in
+   the dashboard URL: `app.checklyhq.com/accounts/<CHECKLY_ACCOUNT_ID>/...`). Or
+   just run `cd monitoring && npx checkly login` and skip these two.
 4. Fill the repo's root `.env` (keys documented in [`.env.example`](.env.example)):
 
    ```sh
-   CHECKLY_AGENT_API_KEY=pl_...
-   CHECKLY_API_KEY=...
-   CHECKLY_ACCOUNT_ID=...
+   CHECKLY_AGENT_API_KEY=pl_...          # the Private Location key
+   CHECKLY_API_KEY=cu_...                # user API key (or use `checkly login`)
+   CHECKLY_ACCOUNT_ID=xxxxxxxx-xxxx-...  # or use `checkly login`
    CHECKLY_PRIVATE_LOCATION=owl-fs-local
    MONITOR_TARGET_URL=http://api:8000
    ```
@@ -60,6 +63,39 @@ make monitor-deploy # schedule them every 5 min
 Add an email/Slack **alert channel** in the dashboard (or as an `AlertChannel`
 construct here) so failures actually notify someone.
 
+## What to expect
+
+`make monitor` runs the checks on the agent and prints:
+
+```text
+Running 6 checks in private location owl-fs-local.
+
+__checks__/api.check.ts
+  ✔ GET /funds
+  ✔ GET /funds?strategy=Infrastructure
+  ✔ GET /funds/<unknown> -> 404
+  ✔ GET /funds/F-1001
+  ✔ GET /health
+  ✔ GET /strategies
+
+6 passed, 6 total
+```
+
+Exit code is non-zero if any check fails, so it works as a gate. After
+`make monitor-deploy` the six checks show up under **Home** in the dashboard and
+re-run every 5 minutes; `--record` runs (and CI runs) also appear under **Test
+sessions** with full request/response traces.
+
+Prove alerting end to end:
+
+```sh
+make monitor-deploy
+docker compose stop api      # break it
+# ~5 min later: the checks go red on the dashboard (and alert, if a channel is set)
+docker compose start api     # recover
+cd monitoring && npx checkly destroy   # remove the scheduled monitors
+```
+
 ## Without a private location (deployed API)
 
 Set `MONITOR_TARGET_URL` to the public URL and leave `CHECKLY_PRIVATE_LOCATION`
@@ -72,6 +108,16 @@ unset — the checks then run from Checkly's global public locations
 checks on every relevant PR, and (once `CHECKLY_API_KEY` + `CHECKLY_ACCOUNT_ID`
 are set as repo secrets) runs `checkly test --record` on PRs and `checkly deploy`
 on merge to `main`.
+
+## Troubleshooting
+
+| Symptom                                              | Fix                                                                                                                                                          |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Running N checks in eu-central-1` (a public region) | `CHECKLY_PRIVATE_LOCATION` isn't set in `.env` — `make monitor` needs it to pass `--private-location`.                                                       |
+| All checks fail with connection errors               | the agent isn't up or isn't connected — `make monitor-agent`, then check the dashboard's Private Locations page and `docker compose ... logs checkly-agent`. |
+| `Authentication failed`                              | `CHECKLY_API_KEY` is the `pl_` key, not a `cu_` user key — fix it or run `checkly login`.                                                                    |
+| 404 check fails though the status is 404             | it needs `shouldFail: true` (already set); a bare assertion isn't enough.                                                                                    |
+| `make up` errors on `CHECKLY_AGENT_API_KEY`          | you ran the monitoring overlay without the key — the base `make up` never needs it.                                                                          |
 
 ## Notes
 

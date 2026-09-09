@@ -1,10 +1,13 @@
-# mtv-owl-fs-assessment
+# mtv-owl-checkly-demo
 
-Full-stack assessment project: a minimal app over `funds.csv` — Postgres, a
-Python (FastAPI) API, and a React frontend.
+A small full-stack app over `funds.csv` — Postgres, a Python (FastAPI) API, a
+React table — with a [Checkly](https://www.checklyhq.com/) monitoring-as-code
+setup ([`monitoring/`](monitoring/README.md)) running synthetic API checks against
+it.
 
-This branch (`standup-app-1`) is **Part 1 — stand up the app**. The `commitment`
-column is loaded as raw text and is not parsed; that comes in a later step.
+The app was built in stacked steps, each an open PR:
+`standup-app-1` → `migrate-column-2` (add `commitment_cents` + `currency`) →
+`drop-raw-commitment-3` (drop the raw column). `main` currently holds step 1.
 
 ## Stack
 
@@ -70,9 +73,22 @@ database, so two checkouts can be pointed at one Postgres to compare behavior.
 
 ## Monitoring
 
-[`monitoring/`](monitoring/README.md) is a Checkly monitoring-as-code POC — API
-checks for the endpoints above, reaching the compose API through a Checkly Private
-Location agent. `make monitor` runs them; `make monitor-deploy` schedules them.
+[`monitoring/`](monitoring/README.md) — Checkly synthetic monitoring as code. Six
+API checks (`/health`, `/funds` + filter, `/funds/{id}` hit + 404, `/strategies`)
+run through a **Checkly Private Location**: an agent container on the compose
+network reaches `http://api:8000`, so nothing has to be publicly exposed.
+
+```sh
+# one-time: create a Checkly account + a Private Location "owl-fs-local",
+# then fill the Checkly keys in .env (see monitoring/README.md)
+make up               # app on the compose network
+make monitor-agent    # start the agent -> dashboard shows "1 agent connected"
+make monitor          # run the checks -> "6 passed, 6 total"
+make monitor-deploy   # schedule them every 5 min
+```
+
+Full setup, expected output, and troubleshooting:
+[monitoring/README.md](monitoring/README.md).
 
 ## Schema (migration `0001`)
 

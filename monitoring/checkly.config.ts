@@ -11,7 +11,7 @@ const privateLocation = process.env.CHECKLY_PRIVATE_LOCATION?.trim();
 export default defineConfig({
   projectName: "OWL Funds API",
   logicalId: "owl-fs-api-monitoring",
-  repoUrl: "https://github.com/kingvilceus/mtv-owl-fs-assessment",
+  repoUrl: "https://github.com/kingvilceus/mtv-owl-checkly-demo",
   checks: {
     runtimeId: "2026.04", // `npx checkly runtimes`; matches the agent's bundled runtime
     frequency: Frequency.EVERY_5M,
