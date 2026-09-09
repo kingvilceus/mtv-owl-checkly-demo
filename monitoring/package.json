@@ -1,0 +1,19 @@
+{
+  "name": "owl-fs-monitoring",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Checkly monitoring-as-code for the OWL Funds API",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "checkly test",
+    "test:record": "checkly test --record --reporter=github",
+    "deploy": "checkly deploy --force"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "checkly": "^4.19.0",
+    "dotenv": "^16.4.7",
+    "typescript": "^5.7.3"
+  }
+}

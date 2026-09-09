@@ -1,0 +1,46 @@
+name: checkly
+
+on:
+  pull_request:
+    paths:
+      - "monitoring/**"
+      - "api/**"
+      - ".github/workflows/checkly.yml"
+  push:
+    branches: [main]
+    paths:
+      - "monitoring/**"
+      - "api/**"
+      - ".github/workflows/checkly.yml"
+
+# The live steps are gated on CHECKLY_API_KEY, so this workflow is a clean no-op
+# until the repo has CHECKLY_API_KEY + CHECKLY_ACCOUNT_ID secrets. `typecheck`
+# always runs.
+jobs:
+  checkly:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: monitoring
+    env:
+      CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}
+      CHECKLY_ACCOUNT_ID: ${{ secrets.CHECKLY_ACCOUNT_ID }}
+      # A publicly reachable API URL for a deployed environment. Without it the
+      # checks fall back to http://api:8000, which only resolves via the agent.
+      MONITOR_TARGET_URL: ${{ vars.MONITOR_TARGET_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: monitoring/package-lock.json
+      - run: npm ci
+      - name: Typecheck the checks
+        run: npm run typecheck
+      - name: checkly test (pull request)
+        if: ${{ github.event_name == 'pull_request' && env.CHECKLY_API_KEY != '' }}
+        run: npx checkly test --record --reporter=github
+      - name: checkly deploy (main)
+        if: ${{ github.ref == 'refs/heads/main' && env.CHECKLY_API_KEY != '' }}
+        run: npx checkly deploy --force

@@ -1,0 +1,17 @@
+# Checkly Private Location agent. Overlay on the base compose file so the base
+# stack is unaffected when you're not monitoring:
+#   docker compose -f docker-compose.yml -f docker-compose.monitoring.yml up -d checkly-agent
+# or just `make monitor-agent`.
+#
+# The agent keeps an outbound connection to Checkly and runs the checks in
+# monitoring/ against http://api:8000 on this network.
+name: owl-fs
+
+services:
+  checkly-agent:
+    image: checkly/agent:latest
+    environment:
+      API_KEY: ${CHECKLY_AGENT_API_KEY:?set CHECKLY_AGENT_API_KEY in .env}
+    depends_on:
+      - api
+    restart: unless-stopped
