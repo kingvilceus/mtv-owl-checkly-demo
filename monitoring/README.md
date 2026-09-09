@@ -78,3 +78,8 @@ on merge to `main`.
 - Checkly CLI pinned to 4.x; `npx checkly runtimes` lists runtime IDs.
 - `npx checkly test` needs account credentials even to list checks — the local
   typecheck (`npm run typecheck`) is the offline gate.
+- `make monitor` passes `--private-location` and loads `../.env`; a bare
+  `npx checkly test` runs from a Checkly public location that can't reach
+  `http://api:8000`.
+- `checkly deploy` schedules real monitors in your account — `npx checkly destroy`
+  removes them.
