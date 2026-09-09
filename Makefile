@@ -6,7 +6,10 @@ DATABASE_URL ?= postgresql://owl:owl@db:5432/owl
 COMPOSE ?= docker compose
 COMPOSE_ENV = API_HOST_PORT=$(PORT) DATABASE_URL=$(DATABASE_URL)
 API_RUN = $(COMPOSE) run --rm -e DATABASE_URL=$(DATABASE_URL) api
-MONITORING = cd monitoring && npm ci --silent
+
+# cd into monitoring/, install, and load the repo's root .env (auth + target URL).
+CHECKLY = cd monitoring && npm ci --silent && \
+	{ [ -f ../.env ] && set -a && . ../.env && set +a || true; }
 
 .PHONY: help hooks lint seed migrate serve web up down psql \
 	monitor monitor-deploy monitor-agent
@@ -48,7 +51,10 @@ monitor-agent: ## Start the Checkly Private Location agent (needs CHECKLY_AGENT_
 	$(COMPOSE) -f docker-compose.yml -f docker-compose.monitoring.yml up -d checkly-agent
 
 monitor: ## Run the Checkly API checks (agent must be running: make monitor-agent)
-	$(MONITORING) && npx checkly test
+	$(CHECKLY) && \
+	if [ -n "$$CHECKLY_PRIVATE_LOCATION" ]; then \
+		npx checkly test --private-location "$$CHECKLY_PRIVATE_LOCATION"; \
+	else npx checkly test; fi
 
 monitor-deploy: ## Deploy the Checkly checks to run on a schedule
-	$(MONITORING) && npx checkly deploy --force
+	$(CHECKLY) && npx checkly deploy --force

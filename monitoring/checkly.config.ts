@@ -13,7 +13,7 @@ export default defineConfig({
   logicalId: "owl-fs-api-monitoring",
   repoUrl: "https://github.com/kingvilceus/mtv-owl-fs-assessment",
   checks: {
-    runtimeId: "2025.04",
+    runtimeId: "2026.04", // `npx checkly runtimes`; matches the agent's bundled runtime
     frequency: Frequency.EVERY_5M,
     checkMatch: "__checks__/**/*.check.ts",
     tags: ["owl-fs"],

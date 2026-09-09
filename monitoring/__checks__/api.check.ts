@@ -78,6 +78,9 @@ new ApiCheck("owl-fund-detail", {
 new ApiCheck("owl-fund-missing", {
   name: "GET /funds/<unknown> -> 404",
   ...defaults,
+  // A >= 400 response is the expected outcome here, so invert the pass/fail;
+  // the assertion still pins it to exactly 404.
+  shouldFail: true,
   request: {
     method: "GET",
     url: `${baseUrl}/funds/does-not-exist`,
